@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart">
+
+    <ImageView
+        android:id="@+id/status_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:padding="6dp"
+        android:src="@drawable/alertacceptedbyme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/status_indicator"
+        android:layout_toStartOf="@+id/newparts"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textStyle="bold"
+            tools:text="John Doe" />
+
+        <TextView
+            android:id="@+id/latest_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:color="@color/gray"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textStyle="bold"
+            tools:text="Bacon ipsum dolor amet pork loin pancetta porchetta swine corned beef. Shank biltong cow tongue capicola tail. Tenderloin shank tri-tip turkey, hamburger ham spare ribs. Chicken pork ground round beef ribs pork loin venison filet mignon pastrami shankle. Short loin fatback pork belly beef pork." />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/tabClickableTextColor"
+            android:textStyle="bold"
+            tools:text="Address ipsum dolor amet pork loin pancetta porchetta swine corned beef. Shank biltong cow tongue capicola tail. Tenderloin shank tri-tip turkey, hamburger ham spare ribs. Chicken pork ground round beef ribs pork loin venison filet mignon pastrami shankle. Short loin fatback pork belly beef pork." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/newparts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:text="Monday" />
+
+        <LinearLayout
+            android:id="@+id/location"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:src="@drawable/arrow" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:scrollHorizontally="true"
+                android:textSize="10sp"
+                tools:text="1.2mi" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

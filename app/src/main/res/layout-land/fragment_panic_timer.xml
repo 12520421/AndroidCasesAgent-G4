@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tabContentBackColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/checkin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/cancel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tabTitleBackColor"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/cancel"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/tabClickableTextColor" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/actionBarBackColor"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:text="@string/panic_triggered_timer_expires"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/mainMenuTextColor" />
+
+                <LinearLayout
+                    android:id="@+id/timer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                  tools:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TimePicker
+                            android:id="@+id/panic_time_picker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5"
+                            android:timePickerMode="spinner"
+                          tools:ignore="UnusedAttribute"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/tabTitleBackColor"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <ImageButton
+                            android:id="@+id/panic_timer_button"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/starttimer"
+                            android:background="@null"
+                            android:text="@string/start"
+                            android:textAppearance="@android:style/TextAppearance.Medium"
+                            android:textColor="@color/callButtonTextColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start_timer"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:textColor="@color/callButtonTextColor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/animation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:visibility="visible"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/init_panic_alert"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/redorange"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/animation_counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3"
+                        android:textColor="@color/redorange"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/animation_action_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stop_cancel_pause_timer"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/redorange" />
+
+                    <ImageView
+                        android:id="@+id/animation_image_odd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/panicringoddnumbers" />
+
+                    <ImageView
+                        android:id="@+id/animation_image_even"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/panicringevennumbers"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:id="@+id/bottom_buttons_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/tabTitleBackColor"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <LinearLayout
+                            android:id="@+id/call_button_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/panic_pause_button"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                              android:src="@drawable/pausetimer"
+                                android:background="@drawable/call_button_ring"
+                                android:text="@string/pause"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:textColor="@color/callButtonTextColor"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/panic_pause_hint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pause_timer"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:textColor="@color/callButtonTextColor" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:id="@+id/panic_button_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/panic_start_button"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                              android:src="@drawable/panic"
+                                android:background="@drawable/panic_button_ring"
+                                android:text="@string/panic"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:textColor="@color/panicButtonTextColor"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hold_3_seconds"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:textColor="@color/panicButtonTextColor" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!-- end of panic animation layout-->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

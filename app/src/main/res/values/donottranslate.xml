@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- do not translate anything below this -->
+    <string translatable="false" name="server_error_prefix">Error: </string>
+    <string translatable="false" name="model">CASESAgent</string>
+
+    <string translatable="false" name="registration_endpoint">/bluebird/Register.aspx</string>
+    <string translatable="false" name="message_endpoint">/bluebird/Message.aspx</string>
+    <string translatable="false" name="ping_endpoint">/bluebird/Ping.aspx</string>
+    <string translatable="false" name="login_endpoint">/bluebird/LogInUserByKey.aspx</string>
+    <string translatable="false" name="getusers_endpoint">/bluebird/MessengerGetUsers.aspx</string>
+    <string translatable="false" name="chatmessages_endpoint">/bluebird/MessengerGetMessages.aspx</string>
+    <string translatable="false" name="sendmessage_endpoint">/bluebird/MessengerSendMessage.aspx</string>
+    <string translatable="false" name="chat_clear_user_endpoint">/bluebird/MessengerDeleteMessages.aspx</string>
+    <string translatable="false" name="chat_clear_all_endpoint">/bluebird/MessengerClearMessages.aspx</string>
+    <string translatable="false" name="map_endpoint">/bluebird/CasesMapAgent.aspx</string>
+    <string translatable="false" name="fixes_endpoint">/bluebird/SendXml.aspx</string>
+    <string translatable="false" name="mediaheader_endpoint">/bluebird/GetCasesMediaHeaderBySessionId.aspx</string>
+    <string translatable="false" name="casesmedia_endpoint">/bluebird/GetCasesMediaBySessionIdAndCaseNumber.aspx</string>
+    <string translatable="false" name="alertheader_endpoint">/bluebird/GetRecentAlertsAgentHeader.aspx</string>
+    <string translatable="false" name="alerts_endpoint">/bluebird/GetRecentAlertsAgentContent.aspx</string>
+    <string translatable="false" name="poigroups_endpoint">/bluebird/GetPoiGroups.aspx</string>
+    <string translatable="false" name="pois_endpoint">/bluebird/GetPois.aspx</string>
+    <string translatable="false" name="poicategories_endpoint">/bluebird/GetPoiCategories.aspx</string>
+    <string translatable="false" name="mapcommand_endpoint">/bluebird/CasesMapCommand.aspx</string>
+    <string translatable="false" name="create_poi_endpoint">/bluebird/AddPoi.aspx</string>
+    <string translatable="false" name="send_sms_endpoint">/bluebird/MessengerSendSMS.aspx</string>
+    <string translatable="false" name="send_email_endpoint">/bluebird/MessengerSendEmail.aspx</string>
+    <string translatable="false" name="registration_createaccount_endpoint">/bluebird/CreateAccount.aspx</string>
+    <string translatable="false" name="registration_login_endpoint">/bluebird/CasesAgentLogin.aspx</string>
+    <string translatable="false" name="log_endpoint">/bluebird/PostPhoneMessage.aspx</string>
+    <string translatable="false" name="get_last_address_endpoint">/bluebird/GetAddress.aspx</string>
+    <string translatable="false" name="get_avatar_endpoint">/bluebird/GetAvatar.aspx</string>
+    <string translatable="false" name="get_profile_fields_endpoint">/bluebird/GetProfileFields.aspx</string>
+    <string translatable="false" name="set_profile_fields_endpoint">/bluebird/SetProfileFields.aspx</string>
+    <string translatable="false" name="get_invite_data_endpoint">/bluebird/RegisterByInviteCode.aspx</string>
+    <string translatable="false" name="get_canned_messages_endpoint">/bluebird/GetCannedMessages.aspx</string>
+    <string translatable="false" name="get_contacts_endpoint">/bluebird/GetContacts.aspx</string>
+    <string translatable="false" name="post_contacts_endpoint">/bluebird/PostContacts.aspx</string>
+    <string translatable="false" name="checkin_endpoint">/bluebird/CheckIn.aspx</string>
+    <string translatable="false" name="alert_acceptance_endpoint">/bluebird/AlertAcceptance.aspx</string>
+    <string translatable="false" name="subscription_endpoint">/bluebird/GetUserSubscription.aspx</string>
+    <string translatable="false" name="forgot_password_endpoint">/bluebird/ForgotPassword.aspx</string>
+    <string translatable="false" name="setsetupfield_endpoint">/bluebird/SetSetupField.aspx</string>
+
+    <string translatable="false" name="log_type_sms">sms</string>
+    <string translatable="false" name="log_type_phone">phone</string>
+    <string translatable="false" name="log_incoming">in</string>
+    <string translatable="false" name="log_outgoing">out</string>
+    <string translatable="false" name="outgoing_phonenumber">000-00-0000</string>
+
+    <!-- you can change the order of these, except default (@null) must be first, and they must all exist -->
+    <string-array translatable="false" name="language_code">
+        <!-- default -->
+        <item>@null</item>
+        <!-- arabic -->
+        <item>ar</item>
+        <!-- english -->
+        <item>en</item>
+        <!-- french -->
+        <item>fr</item>
+        <!-- Pashto -->
+        <item>ps</item>
+        <!-- fa == Farsi == Persian -->
+        <item>fa</item>
+        <!-- es == Spanish -->
+        <item>es</item>
+    </string-array>
+
+    <string translatable="false" name="img_html"><![CDATA[<!DOCTYPE html><html><head><title>IMG</title><meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no\" /></head><body><img src=\"%1$s\"/></body></html>]]></string>
+    <string translatable="false" name="video_html"><![CDATA[<!DOCTYPE html><html><head><title>VIDEO</title><meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no\" /></head><body><video width=\"100%\" height=\"100%\" style=\"margin: auto; text-align:center;\" controls autoplay><source src=\"xURLx\" type=\"video/mp4\"></video></body></html>]]></string>
+  <string name="phone_hint">1-555-123-1234</string>
+    <string name="app_version">v3.0</string>
+    <string name="_star_">*</string>
+
+    <!-- this is used so that we can dynamically change what tabs are shown at runtime -->
+    <string-array translatable="false" name="tabs">
+        <item>chat</item>
+        <item>collect</item>
+        <item>map</item>
+        <item>poi</item>
+        <item>alert</item>
+        <item>media</item>
+    </string-array>
+
+    <string-array translatable="false" name="smsFrequency">
+        <item>Immediately</item>
+        <item>30 Seconds</item>
+        <item>1 Minute</item>
+        <item>5 Minutes</item>
+        <item>15 Minutes</item>
+        <item>30 Minutes</item>
+        <item>60 Minutes</item>
+        <item>2 Hours</item>
+        <item>4 Hours</item>
+        <item>6 Hours</item>
+        <item>12 Hours</item>
+        <item>24 Hours</item>
+    </string-array>
+
+    <string-array translatable="false" name="phoneLogFrequency">
+        <item>Immediately</item>
+        <item>30 Seconds</item>
+        <item>1 Minute</item>
+        <item>5 Minutes</item>
+        <item>15 Minutes</item>
+        <item>30 Minutes</item>
+        <item>60 Minutes</item>
+        <item>2 Hours</item>
+        <item>4 Hours</item>
+        <item>6 Hours</item>
+        <item>12 Hours</item>
+        <item>24 Hours</item>
+    </string-array>
+
+</resources>

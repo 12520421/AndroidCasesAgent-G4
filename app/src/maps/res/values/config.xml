@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en_US">
+    <bool name="enable_device_admin">false</bool>
+    <bool name="enable_reg_signup">false</bool>
+    <bool name="enable_reg_invite">false</bool>
+    <bool name="enable_call_opsctr_button">false</bool>
+    <bool name="enable_dial_911_button">false</bool>
+</resources>

@@ -1,0 +1,214 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.getkeepsafe.dexcount'
+
+dexcount {
+    runOnEachAssemble = false
+}
+
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://dl.bintray.com/hani-momanii/maven"}
+}
+def renameAPK(variant, defaultConfig) {
+    variant.outputs.each { output ->
+        def formattedDate = new Date().format('yyMMdd')
+
+
+        def applicationName = variant.baseName
+        def file = output.packageApplication.outputFile
+        //def fileName = applicationName + "_v" + defaultConfig.versionCode + "_b" + defaultConfig.versionName + "_" + formattedDate + "_" + buildType + ".apk"
+        def fileName = applicationName + "_v" + defaultConfig.versionName + "_" + formattedDate + ".apk"
+        fileName = fileName.toLowerCase();
+        output.packageApplication.outputFile = new File(file.parent, fileName)
+    }
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    // with the unused classes removed, this is no longer necessary
+    //useLibrary  'org.apache.http.legacy'
+
+    lintOptions {
+        // checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+        applicationId "com.xzfg.app"
+        minSdkVersion 21
+        // we cannot target higher than SDK 22 due to SYSTEM_ALERT_WINDOW permission changes.
+        // see https://commonsware.com/blog/2016/03/24/system-alert-window-now-more-hidden-than-ever.html
+        //noinspection OldTargetApi
+        targetSdkVersion 22
+
+        // build number comes from jenkins, so in development, use 0
+        versionCode System.getenv("BUILD_NUMBER") as Integer ?: 0
+        versionName "0.9.39"// + versionCode
+        multiDexEnabled true
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+        manifestPlaceholders = [appName: "app_name"]
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")
+        }
+
+        release {
+            storeFile file("release.keystore")
+            storePassword '3r243AFSs6JWKX%2'
+            keyAlias 'release'
+            keyPassword 'j4D64qNhe6tnPu&5'
+        }
+
+    }
+
+    buildTypes {
+        debug {
+            //applicationIdSuffix ".debug"
+            versionNameSuffix "-DEBUG"
+            signingConfig signingConfigs.debug
+            ext.betaDistributionGroupAliases = "knowmadics"
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                renameAPK(variant, defaultConfig)
+            }
+        }
+
+        release {
+            applicationIdSuffix ".release"
+            versionNameSuffix "-RELEASE"
+            signingConfig signingConfigs.release
+            // turning this on will currently save about .5MB in app size.
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ext.betaDistributionGroupAliases = "knowmadics"
+            applicationVariants.all { variant ->
+                renameAPK(variant, defaultConfig)
+            }
+        }
+
+    }
+
+    productFlavors {
+
+
+        g4 {
+            applicationId "com.xzfg.app.g4"
+            manifestPlaceholders = [appName: "app_name_sl"]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "true"
+            buildConfigField "boolean", "SSL_PINNING", "false"
+            buildConfigField "int", "DEFAULT_PORT", "4998"
+            buildConfigField "String", "DEFAULT_URL", "\"www.bluebirdstaging.com\""
+            buildConfigField "String", "DEFAULT_ORG", "\"securelocate\""
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField "boolean", "USE_NOTIFICATION", "true"
+            buildConfigField "boolean", "BATTERY_WHITELIST", "false"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+}
+
+ext.supportLibraryVersion = '25.3.1'
+
+dependencies {
+
+    // dagger for dependency injection
+    provided 'com.squareup.dagger:dagger-compiler:1.2.2'
+    compile 'com.squareup.dagger:dagger:1.2.2'
+    compile 'hani.momanii.supernova_emoji_library:supernova-emoji-library:0.0.2'
+    // support libraries
+    compile "com.android.support:support-v4:$supportLibraryVersion"
+    compile "com.android.support:support-v13:$supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$supportLibraryVersion"
+    compile "com.android.support:gridlayout-v7:$supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+    compile 'no.nordicsemi.android.support.v18:scanner:1.0.0'
+    compile 'org.apache.commons:commons-lang3:3.7'
+    compile 'io.github.rockerhieu:emojicon:1.4.1'
+    // network
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+
+    // (de)serializers
+    compile 'com.google.code.gson:gson:2.7'
+    compile('org.simpleframework:simple-xml:2.7.1') {
+        exclude group: 'stax', module: 'stax'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'xpp3', module: 'xpp3'
+    }
+
+    // utilities
+    compile 'com.squareup:seismic:1.0.2'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'org.apache.commons:commons-io:1.3.2'
+    compile 'org.apache.commons:commons-collections4:4.0'
+    compile 'org.apache.commons:commons-lang3:3.0'
+    compile 'net.danlew:android.joda:2.8.1'
+    compile 'com.squareup:tape:1.2.3'
+
+    // ui components
+    compile 'me.dm7.barcodescanner:zbar:1.9'
+    compile 'com.soundcloud.android:android-crop:1.0.1@aar'
+
+    // debugging
+    compile 'com.facebook.stetho:stetho:1.4.2'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    compile 'com.jakewharton.timber:timber:3.1.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.6@aar') {
+        transitive = true;
+    }
+    compile 'com.github.hani-momanii:SuperNova-Emoji:1.1'
+    // testing
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.robolectric:robolectric:2.4'
+    testCompile ('com.squareup:fest-android:1.0.8') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile 'org.jetbrains:annotations-java5:15.0'
+
+
+}
+
+tasks.whenTaskAdded { theTask ->
+    def taskName = theTask.name.toString()
+    if ((taskName.startsWith("test") && taskName.endsWith("Debug"))) {
+        /**
+         * Listen for when robolectric adds the 'test*' task and when it does, add the -noverify
+         * option to that task's jvmArgs.  This allows us to turn off byte code verification when
+         * running our unit tests.
+         */
+        theTask.jvmArgs('-noverify')
+    }
+}

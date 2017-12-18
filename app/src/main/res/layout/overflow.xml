@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_dropdown_panel_apptheme"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/autotrack"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/autotrack"
+            android:id="@+id/autotrack_icon"
+            android:layout_gravity="center_vertical"
+         />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_track"
+            android:layout_weight="2"
+            android:gravity="fill_horizontal"
+            android:layout_gravity="fill_horizontal|center_vertical"
+              android:lines="1"
+              android:maxLines="1"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autotrack_checkbox"
+            android:layout_margin="4dp"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/details"
+        android:orientation="horizontal"
+        android:clickable="true">
+
+
+        <ImageView
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/details"
+            android:id="@+id/details_icon"
+            android:layout_gravity="center_vertical"
+        />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_details"
+            android:layout_weight="1"
+            android:gravity="fill_horizontal"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:lines="1"
+            android:maxLines="1"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/details_checkbox"
+            android:layout_margin="4dp"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/media"
+        android:orientation="horizontal"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/showcases"
+            android:id="@+id/media_icon"
+            android:layout_gravity="center_vertical"
+         />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_cases"
+            android:layout_weight="1"
+            android:gravity="fill_horizontal"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:maxLines="1" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/media_checkbox"
+            android:layout_margin="4dp"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+        />
+
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/myself"
+    android:clickable="true">
+
+
+    <ImageView
+        android:layout_margin="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hidemylocation"
+        android:id="@+id/myself_icon"
+        android:layout_gravity="center_vertical"
+     />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hide_my_location"
+        android:layout_weight="1"
+        android:gravity="fill_horizontal"
+        android:layout_gravity="fill_horizontal|center_vertical"
+        android:maxLines="1"
+    />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myself_checkbox"
+        android:layout_margin="4dp"
+        android:clickable="false"
+        android:layout_gravity="center_vertical"
+        android:gravity="end"
+    />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/others"
+        android:clickable="true">
+
+
+        <ImageView
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/showagents"
+            android:id="@+id/others_icon"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_agents"
+            android:layout_weight="1"
+            android:gravity="fill_horizontal"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:maxLines="1"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/others_checkbox"
+            android:layout_margin="4dp"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/create_poi"
+        android:clickable="true">
+
+
+        <ImageView
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/create_poi"
+            android:id="@+id/create_poi_icon"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/create_poi"
+            android:layout_weight="1"
+            android:gravity="fill_horizontal"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/timberwolf"
+    >
+
+    <RelativeLayout android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/title"
+            android:text="@string/settings"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/redorange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_bar"
+        android:fillViewport="true"
+        android:layout_margin="4dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/content"
+                >
+
+                <TextView
+                    android:text="@string/settings_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:layout_margin="8dp"
+                    android:lineSpacingMultiplier="1.2"/>
+
+                <Button android:id="@+id/btn_scan_settings"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="start|center_vertical"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/scan_settings"
+                    android:padding="12dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@drawable/scan"
+                    />
+                <Button android:id="@+id/btn_create_account"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="start|center_vertical"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/create_account"
+                    android:padding="12dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@drawable/createaccount"
+                    />
+                <Button android:id="@+id/btn_login"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="start|center_vertical"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/login"
+                    android:padding="12dp"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@drawable/login"
+                    />
+
+                <Button
+                    android:id="@+id/btn_invite"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@drawable/invitecode"
+                    android:gravity="start|center_vertical"
+                    android:minHeight="48dp"
+                    android:padding="12dp"
+                    android:text="@string/invite_code" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:text="@string/language_description"
+                    />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:id="@+id/language_spinner"
+                    android:layout_gravity="start"
+                    />
+
+
+                <TextView android:id="@+id/network_error"
+                    android:text="@string/network_error"
+                    android:layout_margin="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@color/redorange"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:gravity="center_horizontal"/>
+
+                <!--
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/registered"
+                    android:src="@drawable/registrationcompleted"
+                    android:layout_marginBottom="12dp"
+                    android:layout_gravity="center_horizontal" />
+                    -->
+                <TextView
+                    android:id="@+id/not_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_registered"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:layout_margin="4dp"
+                    />
+                <!--
+                <TextView android:id="@+id/serial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/serial"
+                    android:textSize="12sp"
+                    android:layout_margin="4dp"
+                    />
+                    -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/app_version"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/gray"
+                    tools:text="1.0.0-DEBUG-LITE"
+                    android:padding="4dp"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

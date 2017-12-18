@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en_US">
+    <bool name="enable_splash_screen">true</bool>
+    <bool name="enable_reg_barcode">false</bool>
+    <bool name="enable_reg_payment">true</bool>
+    <bool name="enable_reg_icon">false</bool>
+    <bool name="enable_reg_background">true</bool>
+    <string name="payment_url">http://deputizeamerica.com/api/payments/mobile-for?user_id=</string>
+</resources>

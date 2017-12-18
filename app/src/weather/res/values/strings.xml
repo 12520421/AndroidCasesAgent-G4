@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en_US">
+    <bool name="boss_mode_weather">true</bool>
+    <string name="slot_game_display">A weather app will display.</string>
+    <string name="registration_title">Welcome to Weather</string>
+    <string name="registration_links"/>
+</resources>

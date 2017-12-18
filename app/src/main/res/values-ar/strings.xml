@@ -1,0 +1,326 @@
+<resources tools:locale="en_US" xmlns:tools="http://schemas.android.com/tools">
+    <!-- app name and variants -->
+    <string name="app_name">فتحات</string>
+    <string name="app_name_lite">فتحات لايت</string>
+    <string name="app_name_basic">فتحات الأساسية</string>
+    <string name="app_name_pro">فتحات برو</string>
+    <string name="app_name_elite">فتحات النخبة</string>
+    <string name="app_name_basic_enhanced">المحسن فتحات الأساسية</string>
+    <string name="app_name_pro_enhanced">فتحات برو المحسنة</string>
+    <string name="app_name_elite_enhanced">فتحات النخبة المحسن</string>
+
+    <!-- tab labels -->
+    <string name="tab_collect">جمع البيانات</string>
+    <string name="tab_chat">ثرثرة</string>
+    <string name="tab_map">خريطة</string>
+    <string name="tab_poi">POI</string>
+    <string name="tab_alerts">التنبيهات</string>
+    <string name="tab_media">وسائل الإعلام</string>
+
+    <!-- navigation drawer labels -->
+    <string name="drawer_chat">ثرثرة</string>
+    <string name="drawer_collect">جمع البيانات</string>
+    <string name="drawer_map">خريطة</string>
+    <string name="drawer_alerts">التنبيهات</string>
+    <string name="drawer_boss_mode">وضع مدرب</string>
+    <string name="drawer_media">وسائل الإعلام</string>
+    <string name="drawer_poi">نقاط الاهتمام</string>
+    <string name="drawer_settings">الإعدادات</string>
+    <string name="drawer_preferences">التفضيلات</string>
+    <string name="drawer_wipe_data">مسح البيانات</string>
+
+    <!-- these strings, which were previously in use in the menu and tabs still have uses in
+    other parts of the application, primarily on screen headings and/or dialog box titles -->
+    <string name="chat">ثرثرة</string>
+    <string name="wipe_data">مسح البيانات</string>
+    <string name="settings">الإعدادات</string>
+    <string name="preferences">التفضيلات</string>
+
+    <string name="android_too_old">يتطلب هذا التطبيق الروبوت 4.2 أو أعلى.</string>
+    <string name="admin_activity">إدارة الجهاز</string>
+    <string name="success_title">نجاح</string>
+    <string name="error_title">خطأ</string>
+    <string name="scan_settings">إعدادات المسح الضوئي</string>
+    <string name="settings_description">للتسجيل، مسح إعدادات الجهاز الخاص بك \'\ ق من ملف التعريف الخادم الخاص بك.</string>
+    <string name="scan_completed">تفحص إكمال الإعدادات بنجاح.</string>
+    <string name="grant_rights">يجب منح حقوق إدارية هذا التطبيق من أجل الاستمرار.</string>
+    <string name="public_broadcast">بث للجميع</string>
+    <string name="general_chat">الدردشة العامة</string>
+    <string name="send_a_message">إرسال رسالة …</string>
+    <string name="existing">موجود</string>
+    <string name="not_while_recording">لا تستطيع تغيير وضع الالتقاط أثناء التسجيل.</string>
+    <string name="camera_unavailable">تعذر فتح الكاميرا المحدد حاليا.</string>
+    <string name="case_information">حالات</string>
+    <string name="case_number">عدد</string>
+    <string name="case_description">وصف</string>
+    <string name="select_media">حدد وسائل الإعلام</string>
+    <string name="same_as_fix_interval">نفس الفاصل الزمني فيكس</string>
+    <string name="maximum_tracking">ماكس تتبع الوقت</string>
+    <string name="fde_unavailable">غير معتمد الروبوت كامل القرص التشفير على هذا الجهاز.</string>
+    <string name="wipe_notice">محو تفجرت بعد.</string>
+    <string name="video_streaming_quality">فيديو جودة البث</string>
+    <string name="language">لغة</string>
+    <string name="language_changed">لغة تم تغيير</string>
+    <string name="language_restart">الرجاء إعادة تشغيل التطبيق أو إعادة تشغيل الجهاز لإعدادات اللغة الجديدة لتأخذ تماما تأثير.</string>
+    <string name="error">خطأ</string>
+    <string name="error_occurred">حدث خطأ.</string>
+    <string name="language_description">إذا كنت بحاجة إلى لغة مختلفة، حدده أدناه.</string>
+    <string name="wipe_confirmation">وهذا إجراء إعادة تعيين مصنع على جهازك، والتي لا يمكن التراجع عنها.</string>
+    <string name="user_offline">العضو غير متصل</string>
+    <string name="send_message_via">إرسال رسالة عبر …</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="sms">رسالة قصيرة</string>
+
+    <!-- barcode suggestions -->
+    <string name="center_barcode">توسيط الباركود.</string>
+    <string name="tap_to_focus">اضغط على التركيز.</string>
+    <string name="avoid_glare">تجنب الوهج والظلال.</string>
+
+    <string name="_yes_">نعم</string>
+    <string name="_no_">لا</string>
+
+    <string name="live_tracking">تتبع الحية</string>
+    <string name="allow_live_tracking">السماح تتبع لايف</string>
+    <string name="allow_live_tracking_">السماح تتبع الفعلى؟</string>
+    <string name="allow_live_tracking_description">وهذا يتطلب تحول على السماح تتبع لايف تفضيل.</string>
+
+    <string name="phone_title">هاتف</string>
+    <string name="phone_recordcalls">المكالمات سجل الهاتف</string>
+    <string name="phone_sms">جمع آوری گزارش SMS</string>
+    <string name="phone_phonelogs">جمع آوری سیاههها تلفن</string>
+
+    <string name="phoneCalls_none">إيقاف</string>
+    <string name="phoneCalls_outgoing">خروجی</string>
+    <string name="phoneCalls_incoming">ورودی</string>
+    <string name="phoneCalls_both">هر دو</string>
+
+    <string name="fix_day_interval">إصلاح الفاصل</string>
+    <string name="reporting_interval">الإبلاغ عن الفاصل الزمني</string>
+    <string name="maximum">أقصى</string>
+    <string name="ping_interval">بينغ الفاصل</string>
+    <string name="default_screen">الشاشة الافتراضية</string>
+    <string name="image_quality">جودة الصورة</string>
+    <string name="image_size">حجم الصورة</string>
+    <string name="video_quality">جودة الفيديو</string>
+    <string name="video_size">فيديو الحجم</string>
+    <string name="video_cases">حالات الفيديو</string>
+    <string name="include_audio">تشمل الصوت</string>
+    <string name="storage">تخزين</string>
+    <string name="use_external">استخدام الخارجي</string>
+    <string name="best_for_connection">أفضل لاتصال</string>
+    <string name="low_3g">(3G) منخفض</string>
+    <string name="medium_wifi">(WiFi)متوسط</string>
+    <string name="high_maximum">(Max)ارتفاع</string>
+    <string name="s352_288">352X288</string>
+    <string name="s640_480">640X480</string>
+    <string name="s960_540">960x540</string>
+    <string name="s1280_720">1280x720 (720P)</string>
+    <string name="s1920_1080">1920x1080 (1080p)</string>
+    <string name="video_framerate">فراميراتي الفيديو</string>
+
+    <string name="recording_cancelled">تسجيل ألغي</string>
+    <string name="insufficient_space">هناك مساحة كافية لتنفيذ هذه العملية.</string>
+    <string name="ran_out_of_space">تم إنهاء تسجيل تلقائيا كما كنت قد استنفدت تقريبا التخزين على وسائل الإعلام المحدد.</string>
+
+    <string name="hide_my_location">إخفاء مكاني</string>
+    <string name="show_agents">مشاهدة كلاء</string>
+    <string name="show_cases">مشاهدة حالات</string>
+    <string name="show_details">مشاهدة تفاصيل</string>
+    <string name="auto_track">المسار التلقائي</string>
+    <string name="points_of_interest">نقاط الاهتمام</string>
+    <string name="wipe_data_description"><![CDATA[Wiping data will&#8230;<br>&#8226; Erase external storage<br>&#8226; Factory reset your device]]></string>
+    <string name="reset_will_follow">وهناك إعادة تعيين مصنع جهاز متابعة.</string>
+    <string name="boss_label">فتحات</string>
+    <string name="boss_mode">وضع مدرب</string>
+    <string name="boss_mode_tap">اضغط على زر التالي للتبديل إلى وضع رئيسه.</string>
+    <string name="slot_game_display">وهناك لعبة فتحة آلة عرض.</string>
+    <string name="execute_boss_mode">تنفيذ وضع مدرب بادرة لاستئناف.</string>
+    <string name="audio_live">الصوت الحي</string>
+    <string name="video_live">بث مباشر فيديو</string>
+    <string name="audio">سمعي</string>
+    <string name="video">فيديو</string>
+    <string name="photo">صور</string>
+    <string name="photos">صور</string>
+    <string name="disabled">معاق</string>
+    <string name="send">إرسال</string>
+    <string name="clear">واضح</string>
+    <string name="cancel">إلغاء</string>
+    <string name="ok">حسنا</string>
+    <string name="sending">ارسال …</string>
+    <string name="message_queued">قائمة الانتظار للتسليم في وقت لاحق.</string>
+    <string name="message_failed">لا ترسل - التحقق من اتصالك.</string>
+    <string name="warning">تحذير</string>
+    <string name="chat_remove_all">وهذا عمل واضحة رسائل لجميع المستخدمين.</string>
+
+    <string name="registration_success">الانتهاء من التسجيل بنجاح.</string>
+    <string name="registration_failed">فشل التسجيل.</string>
+    <string name="qrcode_success">مسح رمز الاستجابة السريعة الناجحة، في محاولة التسجيل.</string>
+    <string name="qrcode_failed">لا يمكن معالجة رمز الاستجابة السريعة، يرجى المحاولة مرة أخرى.</string>
+
+    <string name="clear_all_messages">مسح جميع الرسائل</string>
+    <string name="contacts">اتصالات</string>
+
+    <string name="network_error">لا يمكن أن تصل إلى الخادم. حاول مرة أخرى في وقت لاحق.</string>
+    <string name="not_available">تلك الوظيفة لم يعد متوفرا في الوقت الحالي.</string>
+
+    <string name="agree">توافق</string>
+    <string name="security">أمن</string>
+    <string name="level">مستوى الأمان</string>
+    <string name="medium">متوسط</string>
+    <string name="high">ارتفاع</string>
+
+    <string name="security_changed">تغيير الامن</string>
+    <string name="security_changed_description">تم تغيير مستوى الأمان من متوسط ​​إلى عالي. فإن التطبيق لم يعد تخزين المعلومات على الجهاز.</string>
+    <string name="confirm_change">تأكيد تغيير</string>
+
+    <string name="security_not_changed">الأمن لم تتغير</string>
+    <string name="security_not_changed_description">لم يتم تغيير مستوى الأمان من عالية إلى متوسطة.</string>
+
+    <string name="null_case_number"><![CDATA[<None>]]></string>
+    <!-- alphabetic order, must match the language_code array below properly.  Note that English has an empty item. -->
+    <string-array name="languages">
+        <item>Device Default</item>
+        <item>Arabic</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Pashto</item>
+        <item>Persian</item>
+        <item>Spanish</item>
+    </string-array>
+
+    <string name="create_poi">خلق POI</string>
+
+    <string name="bytes_abbreviated">B</string>
+    <string name="kilobytes_abbreviated">KB</string>
+    <string name="megabytes_abbreviated">MB</string>
+    <string name="miles_abbreviated">ميل</string>
+    <string name="kilometers_abbreviated">كم</string>
+
+    <!-- navigation drawer strings are used for accessibiltiy -->
+    <string name="navigation_drawer_open">فتح درج الملاحة</string>
+    <string name="navigation_drawer_close">انهيار درج الملاحة</string>
+
+    <!-- these are used to fill in the variables in the encryption mismatch messages below -->
+    <string name="aes_128">التشفير AES-128</string>
+    <string name="aes_256">التشفير AES-256</string>
+    <string name="des">التشفير 3DES</string>
+    <string name="no_encryption">بدون تشفير</string>
+
+    <string name="on">في</string>
+    <string name="off">بعيدا</string>
+
+    <string name="poi_name">اسم</string>
+    <string name="enter_or_edit_info">أدخل أو تعديل المعلومات الواردة أدناه</string>
+    <string name="description">وصف</string>
+    <string name="address">عنوان</string>
+    <string name="group">مجموعة</string>
+    <string name="category">فئة</string>
+    <string name="latitude">خط العرض</string>
+    <string name="longitude">خط الطول</string>
+
+    <string name="play">لعب</string>
+    <string name="pause">وقفة</string>
+    <string name="stop">توقف</string>
+    
+    <!-- these strings contain variables, indicated by %X%Y (X == index, Y == value type, s for string, d for digit, and so on. -->
+    <string name="chatting_with_name"><![CDATA[Chatting with <b>%1$s</b>]]></string>
+    <string name="chat_remove_user">This action will clear messages from %1$s.</string>
+    <string name="creating_poi">Creating POI \'%1$s\' at %2$s, %3$s</string>
+    <string name="confirm_description_1">Type \'%1$s\' if you want to temporarily store information on this device.</string>
+    <string name="confirm_description_2">Information will be stored with %1$s.</string>
+    <string name="case_number_">%1$s</string>
+    
+    <!-- user: message -->
+    <string name="last_message">%1$s: %2$s</string>
+    
+    <string name="title_count">%1$s (%2$s)</string>
+    
+    <!-- best -->
+    <string name="_best_">%1$d (Best)</string>
+    
+    <string name="no_encryption_mismatch_error" tools:ignore="StringFormatCount">This application does not support encryption.  The barcode contains %2$s.  The encryption key can be adjusted on the server under \'Admin : Org Settings\'.  Alternatively, you could download another version of the application that supports no encryption.</string>
+    <string name="encryption_mismatch_error">This application only supports %1$s.  The barcode contains %2$s.  The encryption key can be adjusted on the server under \'Admin : Org Settings\'.  Alternatively, you could download another version of the application that supports %2$s.</string>
+    <string name="field_required">The %1$s field is required.</string>
+    
+    <!--
+        android's plurals allow for dealing with languages that have
+        different needs based on the size of a number.
+        %d is the number.
+        zero == what to do if the number is 0
+        one == what to do if the number is 1
+        two == what to do if the number is 2
+        few == what to do if the number is "a few" as determined by the language/locale
+        many == what to do if the number is "many" as determined by the language/locale
+        other == what to do if the number doesn't fit into any of the above cases.
+
+        In English, two, few, many, and other are the same.
+
+        Zero is sometimes the same as 2, sometimes not.
+        For example "Every 0 Seconds" & "Every 2 Seconds". Although for something like
+        time, in this case "Never" is the 0 version. Except Android doesn't do this for
+        english!
+
+        1 is usually singular, and sometimes the number can be left out
+        "Every Second" is nicer than "Every 1 Second".
+    -->
+    <string name="never">أبدا</string>
+    <plurals name="every_second">
+        <item quantity="zero">أبدا</item>
+        <item quantity="one">%d الثانية</item>
+        <item quantity="two">%d ثواني</item>
+        <item quantity="few">%d ثواني</item>
+        <item quantity="many">%d ثواني</item>
+        <item quantity="other">%d ثواني</item>
+    </plurals>
+    <plurals name="every_minute">
+        <item quantity="zero">أبدا</item>
+        <item quantity="one">%d دقيقة</item>
+        <item quantity="two">%d دقائق</item>
+        <item quantity="few">%d دقائق</item>
+        <item quantity="many">%d دقائق</item>
+        <item quantity="other">%d دقائق</item>
+    </plurals>
+    <plurals name="every_hour">
+        <item quantity="zero">أبدا</item>
+        <item quantity="one">%d ساعة</item>
+        <item quantity="two">%d ساعات</item>
+        <item quantity="few">%d ساعات</item>
+        <item quantity="many">%d ساعات</item>
+        <item quantity="other">%d ساعات</item>
+    </plurals>
+    
+    <!-- these are not yet in use, maybe do not translate these just yet -->
+    <plurals name="_byte">
+        <item quantity="zero">%d Bytes</item>
+        <item quantity="one">%d Byte</item>
+        <item quantity="two">%d Bytes</item>
+        <item quantity="few">%d Bytes</item>
+        <item quantity="many">%d Bytes</item>
+        <item quantity="other">%d Bytes</item>
+    </plurals>
+    <plurals name="_kilobyte">
+        <item quantity="zero">%d Kilobytes</item>
+        <item quantity="one">%d Kilobyte</item>
+        <item quantity="two">%d Kilobytes</item>
+        <item quantity="few">%d Kilobytes</item>
+        <item quantity="many">%d Kilobytes</item>
+        <item quantity="other">%d Kilobytes</item>
+    </plurals>
+    <plurals name="_megabyte">
+        <item quantity="zero">%d Megabytes</item>
+        <item quantity="one">%d Megabyte</item>
+        <item quantity="two">%d Megabytes</item>
+        <item quantity="few">%d Megabytes</item>
+        <item quantity="many">%d Megabytes</item>
+        <item quantity="other">%d Megabytes</item>
+    </plurals>
+    <plurals name="_gigabyte">
+        <item quantity="zero">%d Gigabytes</item>
+        <item quantity="one">%d Gigabyte</item>
+        <item quantity="two">%d Gigabytes</item>
+        <item quantity="few">%d Gigabytes</item>
+        <item quantity="many">%d Gigabytes</item>
+        <item quantity="other">%d Gigabytes</item>
+    </plurals>
+
+</resources>

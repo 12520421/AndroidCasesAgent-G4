@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "417798668786",
+    "firebase_url": "https://fun-pin.firebaseio.com",
+    "project_id": "fun-pin",
+    "storage_bucket": "fun-pin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417798668786:android:7966c1337766490d",
+        "android_client_info": {
+          "package_name": "com.xzfg.app.funpin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417798668786-f6mvqjp6nc47p8qmdiiv8c6c4i5mbs3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYvff9JBbBH1zP-Y-3Vxh3c010fMscMuM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417798668786:android:8561c4b323f9606e",
+        "android_client_info": {
+          "package_name": "com.xzfg.app.funpin.release"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417798668786-f6mvqjp6nc47p8qmdiiv8c6c4i5mbs3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYvff9JBbBH1zP-Y-3Vxh3c010fMscMuM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

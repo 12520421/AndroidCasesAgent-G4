@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.xzfg.app.activities.AgentActivity">
+
+    <item
+        android:id="@+id/temperature_f"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="@string/fahrenheit"
+      tools:ignore="AlwaysShowAction"/>
+
+    <item
+        android:id="@+id/temperature_c"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/celsius"
+      tools:ignore="AlwaysShowAction"/>
+</menu>

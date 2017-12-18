@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/timberwolf"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/map_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bar_holder">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/offline_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame_rounded_blue"
+        android:textColor="@color/redorange"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_alignBottom="@+id/map_frame"
+        android:text="@string/offline_map"/>
+
+    <LinearLayout
+        android:id="@+id/bar_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/button_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/faketrans"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.xzfg.app.widgets.LiveTrackingButton
+                    android:id="@+id/livetrack_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/livetrack_off"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/livetrack_off"
+                    android:padding="8dp"
+                    android:text="@string/live_tracking"
+                    tools:ignore="RtlHardcoded" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.xzfg.app.widgets.CenterMapButton
+                    android:id="@+id/center_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/center_off" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

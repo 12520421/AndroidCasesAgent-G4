@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextureView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/control_bar"
+        android:id="@+id/texture"
+    />
+    <LinearLayout android:id="@+id/control_bar" android:orientation="vertical" android:layout_centerHorizontal="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:layout_above="@+id/button_bar">
+        <SeekBar android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/seekBar"/>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_horizontal" android:paddingBottom="16dp">
+            <ImageButton android:src="@drawable/ic_media_play" android:text="@string/play" android:id="@+id/btn_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp" />
+            <ImageButton android:src="@drawable/ic_media_pause" android:text="@string/pause" android:id="@+id/btn_pause" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:minWidth="48dp" />
+            <ImageButton android:src="@drawable/ic_media_stop" android:text="@string/stop" android:id="@+id/btn_stop" android:layout_width="wrap_content"  android:layout_height="wrap_content" android:minWidth="48dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_bar"
+        android:background="@color/faketrans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:gravity="center">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_list"
+                android:background="@null"
+                android:padding="8dp"
+                android:id="@+id/back_button"
+                android:layout_gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

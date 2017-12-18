@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en_US">
+    <!-- app name and variants -->
+    <string name="app_name">Slots</string>
+    <string name="app_name_lite">Slots Lite</string>
+    <string name="app_name_basic">Slots Basic</string>
+    <string name="app_name_pro">Slots Pro</string>
+    <string name="app_name_elite">Slots Elite</string>
+    <string name="app_name_basic_enhanced">Slots Basic Enhanced</string>
+    <string name="app_name_pro_enhanced">Slots Pro Enhanced</string>
+    <string name="app_name_elite_enhanced">Slots Elite Enhanced</string>
+    <string name="app_name_noicon">Slots 00</string>
+    <string name="app_name_sl">Guardian G4</string>
+    <!-- new names 03/04/2016 -->
+    <string name="app_name_kmi99">KMI 99</string>
+    <string name="app_name_fun">Fun Slots</string>
+    <string name="app_name_weather">Weather</string>
+    <string name="app_name_pin">Fun Pin</string>
+    <string name="app_name_deputizeamerica">Deputize America</string>
+    <string name="app_name_jdar">1789</string>
+    <string name="app_name_maps">Maps</string>
+
+
+    <!-- tab labels -->
+    <string name="tab_collect">Collect</string>
+    <string name="tab_chat">Messenger</string>;
+    <string name="tab_map">Map</string>
+    <string name="tab_poi">POI</string>
+    <string name="tab_alerts">Alerts</string>
+    <string name="tab_media">Team Collects</string>
+    <string name="tab_atcommands">AT Commands</string>
+    <string name="tab_markalert">Mark/Alert</string>
+    <string name="tab_status">Status</string>
+    <string name="tab_configuration">Configuration</string>
+    <!-- TODO: These need to be localized -->
+    <string name="tab_home">Home</string>
+    <string name="tab_checkin">Check-in</string>
+    <string name="tab_timer">Timer</string>
+    <string name="tab_contacts">Contacts</string>
+
+    <!-- navigation drawer labels -->
+    <string name="drawer_chat">Messenger</string>
+    <string name="drawer_collect">Data Collect</string>
+    <string name="drawer_map">Map</string>
+    <string name="drawer_alerts">Alerts</string>
+    <string name="drawer_boss_mode">Boss Mode</string>
+    <string name="drawer_media">Team Collects</string>
+    <string name="drawer_poi">Points of Interest</string>
+    <string name="drawer_settings">Registration</string>
+    <string name="drawer_preferences">Preferences</string>
+    <string name="drawer_wipe_data">Wipe Data</string>
+
+    <!-- TODO: These need to be localized -->
+    <string name="drawer_home">Home</string>
+    <string name="drawer_checkin">Check-in</string>
+    <string name="drawer_timer">Timer</string>
+    <string name="drawer_contacts">Contacts</string>
+
+    <!-- these strings, which were previously in use in the menu and tabs still have uses in
+    other parts of the application, primarily on screen headings and/or dialog box titles -->
+    <string name="chat">Messenger</string>
+    <string name="wipe_data">Wipe Data</string>
+    <string name="settings">Registration</string>
+    <string name="preferences">Preferences</string>
+
+    <string name="android_too_old">This application requires Android 4.3 or higher.</string>
+    <string name="admin_activity">Device Administration</string>
+    <string name="success_title">Success</string>
+    <string name="error_title">Error</string>
+    <string name="scan_settings">Barcode Scan</string>
+    <string name="scan_completed">The settings scan completed successfully.</string>
+    <string name="grant_rights">You must grant this application administrative rights in order to continue.</string>
+    <string name="public_broadcast">Broadcast to all</string>
+    <string name="general_chat">General Chat</string>
+    <string name="existing">Existing</string>
+    <string name="not_while_recording">You may not change the capture mode while recording.</string>
+    <string name="camera_unavailable">The currently selected camera could not be opened.</string>
+    <string name="case_information">Cases</string>
+    <string name="case_number">Case Number</string>
+    <string name="case_description">Case Description</string>
+    <string name="select_media">Select Media</string>
+    <string name="same_as_fix_interval">Same as Fix Interval</string>
+    <string name="maximum_tracking">Max Tracking Time</string>
+    <string name="fde_unavailable">Android Full Disk Encryption is not supported on this device.</string>
+    <string name="wipe_notice">A remote wipe has been triggered.</string>
+    <string name="video_streaming_quality">Video Streaming Quality</string>
+    <string name="language">Language</string>
+    <string name="language_changed">Language Changed</string>
+    <string name="language_restart">Please restart the application or reboot the device for your new language settings to fully take effect.</string>
+    <string name="error">Error</string>
+    <string name="error_occurred">An error has occurred.</string>
+    <string name="language_description">If you need a different language, select it below.</string>
+    <string name="wipe_confirmation">Unregister application and delete all unsent data.</string>
+    <string name="user_offline">User Offline</string>
+    <string name="email">Email</string>
+    <string name="sms">SMS</string>
+
+    <!-- barcode suggestions -->
+    <string name="center_barcode">Center the barcode.</string>
+    <string name="tap_to_focus">Tap to focus.</string>
+    <string name="avoid_glare">Avoid glare and shadows.</string>
+
+    <string name="_yes_">YES</string>
+    <string name="_no_">NO</string>
+
+    <string name="live_tracking">Live Tracking</string>
+    <string name="allow_live_tracking">Allow Tracking</string>
+    <string name="allow_live_tracking_">Allow Tracking?</string>
+    <string name="allow_live_tracking_description">This requires turning on the Allow Tracking preference.</string>
+
+    <string name="phone_title">Collect</string>
+    <string name="phone_recordcalls">Record Phone Calls</string>
+    <string name="phone_sms">Collect SMS Logs</string>
+    <string name="phone_sms_delivery">SMS Log Delivery Interval</string>
+    <string name="phone_phonelogs">Collect Phone Logs</string>
+    <string name="phone_phonelog_delivery">Phone Log Delivery Interval</string>
+
+    <string name="phoneCalls_none">Off</string>
+    <string name="phoneCalls_outgoing">Outgoing</string>
+    <string name="phoneCalls_incoming">Incoming</string>
+    <string name="phoneCalls_both">Both</string>
+
+    <string name="sms_delivery_immediately">Immediately</string>
+    <string name="sms_delivery_30seconds">30 Seconds</string>
+    <string name="sms_delivery_1minute">1 Minute</string>
+    <string name="sms_delivery_5minutes">5 Minutes</string>
+    <string name="sms_delivery_15minutes">15 Minutes</string>
+    <string name="sms_delivery_30minutes">30 Minutes</string>
+    <string name="sms_delivery_60minutes">60 Minutes</string>
+    <string name="sms_delivery_2hours">2 Hours</string>
+    <string name="sms_delivery_4hours">4 Hours</string>
+    <string name="sms_delivery_6hours">6 Hours</string>
+    <string name="sms_delivery_12hours">12 Hours</string>
+    <string name="sms_delivery_24hours">24 Hours</string>
+
+    <string name="phoneLog_delivery_immediately">Immediately</string>
+    <string name="phoneLog_delivery_30seconds">30 Seconds</string>
+    <string name="phoneLog_delivery_1minute">1 Minute</string>
+    <string name="phoneLog_delivery_5minutes">5 Minutes</string>
+    <string name="phoneLog_delivery_15minutes">15 Minutes</string>
+    <string name="phoneLog_delivery_30minutes">30 Minutes</string>
+    <string name="phoneLog_delivery_60minutes">60 Minutes</string>
+    <string name="phoneLog_delivery_2hours">2 Hours</string>
+    <string name="phoneLog_delivery_4hours">4 Hours</string>
+    <string name="phoneLog_delivery_6hours">6 Hours</string>
+    <string name="phoneLog_delivery_12hours">12 Hours</string>
+    <string name="phoneLog_delivery_24hours">24 Hours</string>
+
+
+    <string name="fix_day_interval">Daytime Fixes</string>
+    <string name="fix_night_interval">Nighttime Fixes</string>
+    <string name="fix_panic_interval">Fixes During Panic</string>
+    <string name="reporting_interval">Reporting Interval</string>
+    <string name="maximum">Maximum</string>
+    <string name="ping_interval">Ping Interval</string>
+    <string name="default_screen">Default Screen</string>
+    <string name="image_quality">Quality</string>
+    <string name="image_size">Size</string>
+    <string name="video_quality">Quality</string>
+    <string name="video_size">Size</string>
+    <string name="video_cases">Video Cases</string>
+    <string name="include_audio">Include Audio</string>
+    <string name="storage">Storage</string>
+    <string name="use_external">Use External</string>
+    <string name="best_for_connection">Best for Connection</string>
+    <string name="low_3g">Low (3G)</string>
+    <string name="medium_wifi">Medium (WiFi)</string>
+    <string name="high_maximum">High (Maximum)</string>
+    <string name="s352_288">352x288</string>
+    <string name="s640_480">640x480</string>
+    <string name="s960_540">960x540</string>
+    <string name="s1280_720">1280x720 (720p)</string>
+    <string name="s1920_1080">1920x1080 (1080p)</string>
+    <string name="video_framerate">Frame Rate</string>
+
+    <string name="recording_cancelled">Recording Cancelled</string>
+    <string name="insufficient_space">There is insufficient space to carry out this operation.</string>
+    <string name="ran_out_of_space">The recording has been automatically terminated as you have nearly exhausted the storage on the selected media.</string>
+
+    <string name="hide_my_location">Hide My Location</string>
+    <string name="show_agents">Others</string>
+    <string name="show_cases">Media</string>
+    <string name="show_details">Details</string>
+    <string name="auto_track">Auto Track</string>
+    <string name="points_of_interest">Points of Interest</string>
+    <string name="reset_will_follow">A device factory reset will follow.</string>
+    <string name="boss_label">Slots</string>
+    <string name="boss_mode">Boss Mode</string>
+    <string name="boss_mode_tap">Tap the button below to switch into boss mode.</string>
+    <string name="slot_game_display">A slot machine game will display.</string>
+    <string name="execute_boss_mode">Execute boss mode gesture to resume.</string>
+    <string name="audio_live">Audio LIVE</string>
+    <string name="video_live">Video LIVE</string>
+    <string name="audio">Audio</string>
+    <string name="video">Video</string>
+    <string name="photo">Photo</string>
+    <string name="photos">Photos</string>
+    <string name="disabled">Disabled</string>
+    <string name="send">Send</string>
+    <string name="clear">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="message_queued">Queued For Later Delivery.</string>
+    <string name="message_failed">Not Sent - Check Your Connection.</string>
+    <string name="warning">Warning</string>
+    <string name="chat_remove_all">This action will clear messages for all users.</string>
+
+    <string name="registration_success">Registration completed successfully.</string>
+    <string name="registration_failed">Registration failed.</string>
+    <string name="qrcode_success">QR code scan successful, attempting registration.</string>
+    <string name="qrcode_failed">QR code could not be processed, please try again.</string>
+    <string name="invite_success">Invite code validated, attempting registration.</string>
+    <string name="invite_failed">Invalid invite code, please try again.</string>
+
+    <string name="clear_all_messages">Clear All Messages</string>
+    <string name="contacts">Contacts</string>
+
+    <string name="network_error">Could not reach server. Try again later.</string>
+    <string name="not_available">That function is not available at this time.</string>
+    <string name="ssl_error">Server certificate could not be validated. Try again later.</string>
+
+    <string name="agree">Agree</string>
+    <string name="security">Security</string>
+    <string name="level">Level</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
+
+    <string name="security_changed">Security Changed</string>
+    <string name="security_changed_description">The security level has been changed from Medium to High. The app will no longer store information on the device.</string>
+    <string name="confirm_change">Confirm Change</string>
+
+    <string name="security_not_changed">Security Not Changed</string>
+    <string name="security_not_changed_description">Security level was not changed from High to Medium.</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_confirm">Are you sure you want to send a panic alert?</string>
+    <string name="sos_connect">Connect to the Internet in order to send SOS message.</string>
+    <string name="sos_ack">Panic alert has been successfully sent.</string>
+    <string name="notice">Notice</string>
+    <string name="switch_on">On</string>
+    <string name="switch_off">Off</string>
+    <!-- alphabetic order, must match the language_code array below properly. -->
+    <string-array name="languages">
+        <item>Device Default</item>
+        <item>Arabic</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Pashto</item>
+        <item>Persian</item>
+        <item>Spanish</item>
+    </string-array>
+
+    <string name="create_poi">Create POI</string>
+
+    <string name="bytes_abbreviated">B</string>
+    <string name="kilobytes_abbreviated">KB</string>
+    <string name="megabytes_abbreviated">MB</string>
+    <string name="miles_abbreviated">mi</string>
+    <string name="kilometers_abbreviated">km</string>
+
+    <!-- navigation drawer strings are used for accessibiltiy -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- these are used to fill in the variables in the encryption mismatch messages below -->
+    <string name="aes_128">AES-128 encryption</string>
+    <string name="aes_256">AES-256 encryption</string>
+    <string name="des">3DES encryption</string>
+    <string name="no_encryption">no encryption</string>
+
+    <string name="on">On</string>
+    <string name="off">Off</string>
+
+    <string name="poi_name">Name</string>
+    <string name="enter_or_edit_info">Enter or edit the information below</string>
+    <string name="description">Description</string>
+    <string name="address">Address</string>
+    <string name="group">Group</string>
+    <string name="category">Category</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+
+    <string name="eula">EULA</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+
+    <string name="audio_recording">Audio Recording In Progress</string>
+
+    <string name="sms_sent">SMS Sent</string>
+    <string name="help">Help</string>
+
+    <!-- These strings contain special characters, escpae sequences, html, etc.  You cannot use a tool to translate these. -->
+    <!-- Some of these strings contain variables, indicated by %X%Y (X == index, Y == value type, s for string, d for digit, and so on. -->
+    <string name="serial_number">Serial#: %1$s</string>
+    <string name="wipe_data_description"><![CDATA[Wiping data will&#8230;<br>&#8226; Erase external storage<br>&#8226; Factory reset your device]]></string>
+    <string name="null_case_number"><![CDATA[<None>]]></string>
+    <string name="chatting_with_name"><![CDATA[Chatting with <b>%1$s</b>]]></string>
+    <string name="settings_description">Choose a method of registration</string>
+    <string name="creating_poi">Creating POI \"%1$s\" at %2$s, %3$s</string>
+    <string name="confirm_description_1">Type \'%1$s\' if you want to temporarily store information on this device.</string>
+    <string name="no_encryption_mismatch_error" tools:ignore="StringFormatCount">This application does not support encryption.  The barcode contains %2$s.  The encryption key can be adjusted on the server under \'Admin : Org Settings\'.  Alternatively, you could download another version of the application that supports no encryption.</string>
+    <string name="encryption_mismatch_error">This application only supports %1$s.  The barcode contains %2$s.  The encryption key can be adjusted on the server under \'Admin : Org Settings\'.  Alternatively, you could download another version of the application that supports %2$s.</string>
+    <string name="chat_remove_user">This action will clear messages from %1$s.</string>
+    <string name="confirm_description_2">Information will be stored with %1$s.</string>
+    <string name="case_number_">%1$s</string>
+    <string name="send_message_via">Send message via&#8230;</string>
+    <string name="sending">Sending&#8230;</string>
+    <string name="send_a_message">Send a message&#8230;</string>
+    <string name="not_change_security_level_while_recording"><![CDATA[You may not change the security level while recording.\nPlease stop recording and try again.]]></string>
+
+
+    <!-- user: message -->
+    <string name="last_message">%1$s: %2$s</string>
+
+    <string name="title_count">%1$s (%2$s)</string>
+
+    <!-- best -->
+    <string name="_best_">%1$d (Best)</string>
+
+    <string name="field_required">The %1$s field is required.</string>
+
+
+    <!--
+        android's plurals allow for dealing with languages that have
+        different needs based on the size of a number.
+        %d is the number.
+        zero == what to do if the number is 0
+        one == what to do if the number is 1
+        two == what to do if the number is 2
+        few == what to do if the number is "a few" as determined by the language/locale
+        many == what to do if the number is "many" as determined by the language/locale
+        other == what to do if the number doesn't fit into any of the above cases.
+
+        In English, two, few, many, and other are the same.
+
+        Zero is sometimes the same as 2, sometimes not.
+        For example "Every 0 Seconds" & "Every 2 Seconds". Although for something like
+        time, in this case "Never" is the 0 version. Except Android doesn't do this for
+        English!
+
+        1 is usually singular, and sometimes the number can be left out
+        "Every Second" is nicer than "Every 1 Second".
+    -->
+    <string name="never">Never</string>
+    <plurals name="every_second">
+        <item quantity="zero">Never</item>
+        <item quantity="one">%d Second</item>
+        <item quantity="two">%d Seconds</item>
+        <item quantity="few">%d Seconds</item>
+        <item quantity="many">%d Seconds</item>
+        <item quantity="other">%d Seconds</item>
+    </plurals>
+    <plurals name="every_minute">
+        <item quantity="zero">Never</item>
+        <item quantity="one">%d Minute</item>
+        <item quantity="two">%d Minutes</item>
+        <item quantity="few">%d Minutes</item>
+        <item quantity="many">%d Minutes</item>
+        <item quantity="other">%d Minutes</item>
+    </plurals>
+    <plurals name="every_hour">
+        <item quantity="zero">Never</item>
+        <item quantity="one">%d Hour</item>
+        <item quantity="two">%d Hours</item>
+        <item quantity="few">%d Hours</item>
+        <item quantity="many">%d Hours</item>
+        <item quantity="other">%d Hours</item>
+    </plurals>
+    <plurals name="mile">
+        <item quantity="zero">%d Miles</item>
+        <item quantity="one">%d Mile</item>
+        <item quantity="two">%d Miles</item>
+        <item quantity="few">%d Miles</item>
+        <item quantity="many">%d Miles</item>
+        <item quantity="other">%d Miles</item>
+    </plurals>
+
+    <!-- these are not yet in use, maybe do not translate these just yet -->
+    <plurals name="_byte">
+        <item quantity="zero">%d Bytes</item>
+        <item quantity="one">%d Byte</item>
+        <item quantity="two">%d Bytes</item>
+        <item quantity="few">%d Bytes</item>
+        <item quantity="many">%d Bytes</item>
+        <item quantity="other">%d Bytes</item>
+    </plurals>
+    <plurals name="_kilobyte">
+        <item quantity="zero">%d Kilobytes</item>
+        <item quantity="one">%d Kilobyte</item>
+        <item quantity="two">%d Kilobytes</item>
+        <item quantity="few">%d Kilobytes</item>
+        <item quantity="many">%d Kilobytes</item>
+        <item quantity="other">%d Kilobytes</item>
+    </plurals>
+    <plurals name="_megabyte">
+        <item quantity="zero">%d Megabytes</item>
+        <item quantity="one">%d Megabyte</item>
+        <item quantity="two">%d Megabytes</item>
+        <item quantity="few">%d Megabytes</item>
+        <item quantity="many">%d Megabytes</item>
+        <item quantity="other">%d Megabytes</item>
+    </plurals>
+    <plurals name="_gigabyte">
+        <item quantity="zero">%d Gigabytes</item>
+        <item quantity="one">%d Gigabyte</item>
+        <item quantity="two">%d Gigabytes</item>
+        <item quantity="few">%d Gigabytes</item>
+        <item quantity="many">%d Gigabytes</item>
+        <item quantity="other">%d Gigabytes</item>
+    </plurals>
+    <string name="title_activity_eula">EulaActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Registration</string>
+    <string name="registration_complete">Registration Complete</string>
+    <string name="login">Log in</string>
+    <string name="create_account">Create Account</string>
+    <string name="not_registered">Not Registered</string>
+    <string name="register">Register</string>
+    <string name="phone_number_">Phone Number</string>
+    <string name="email_address_">Email Address</string>
+    <string name="confirm_password__">Confirm Password</string>
+    <string name="password__">Password</string>
+    <string name="username__">Username</string>
+    <string name="name__">Name</string>
+    <string name="organization__">Organization</string>
+    <string name="port__">Port</string>
+    <string name="url__">URL</string>
+    <string name="_required_fields">* Required Fields</string>
+    <string name="cantcreatepoi">Could not create POI, please try again later.</string>
+    <string name="password_confirmation">Password Confirmation</string>
+    <string name="password_not_confirmed">Your password could not be confirmed.</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="profile_picture_required">Profile Picture is required.</string>
+    <string name="invalid_registration">Invalid Registration</string>
+    <string name="fill_in_required_fields">Please fill in the required fields.</string>
+    <string name="registration_in_progress">Registration in progress, please wait.</string>
+    <string name="registering">Registering</string>
+    <string name="invite_code">Invite Code</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="auto_update">Auto Update</string>
+
+
+    <!-- Weather -->
+    <string name="day">Day</string>
+    <string name="night">Night</string>
+    <string name="today">Today</string>
+    <string name="four_days">4 Days</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind %1$s %2$d MPH</string>
+    <string name="splash_screen_teaser"> </string>
+
+    <!-- TODO: These need to be localized -->
+    <string name="add_photo">Add Photo</string>
+    <string name="edit">Edit</string>
+    <string name="update_location"><u>Update Location</u></string>
+    <string name="init_panic_alert">INITIATING PANIC ALERT IN</string>
+    <string name="release_panic_button">RELEASE BUTTON TO CANCEL</string>
+    <string name="panic">Panic</string>
+    <string name="call">Call</string>
+    <string name="_911">911</string>
+    <string name="dial_911">Dial 911</string>
+    <string name="hold_3_seconds">Hold 3 Seconds</string>
+    <string name="operations_center">Operations Center</string>
+    <string name="unknown">Unknown</string>
+    <string name="last_location_address">Last Location Address</string>
+    <string name="panic_message">Your panic message has been received.</string>
+    <string name="panic_message_number">%1$s</string>
+    <string name="panic_initiated">PANIC INITIATED</string>
+    <string name="submit">Submit</string>
+    <string name="enter_reason_cancel_panic">Please enter reason to cancel panic.</string>
+    <string name="enter_pin_cancel_panic">Please enter PIN to cancel panic.</string>
+    <string name="invalid_pin_try_again">Invalid PIN. Please try again.</string>
+    <string name="map">Map</string>
+    <string name="show_trackers">Show Trackers</string>
+    <string name="tracker_visibility">Tracker Visibility</string>
+    <string name="aoi_visibility">AOI Visibility</string>
+    <string name="team">Team</string>
+    <string name="american_deputy">American Deputy</string>
+    <string name="on_duty">On Duty</string>
+    <string name="alert_radius">Alert Radius</string>
+    <string name="panic_screen">Panic</string>
+    <string name="cancel_pin">Cancel PIN (4 digits)</string>
+    <string name="duress_pin">Duress PIN (4 digits)</string>
+    <string name="boss_pin">Boss Mode PIN (4 digits)</string>
+    <string name="pin">PIN</string>
+    <string name="boss_mode_style">Boss Mode Style</string>
+    <string name="map_capture">Map Capture</string>
+    <string name="frequency">Frequency</string>
+    <string name="vibrate_on_fix">Vibrate on Fix</string>
+    <string name="add">Add</string>
+    <string name="done">Done</string>
+    <string name="email__">Email*:</string>
+    <string name="mobile__">Mobile*:</string>
+    <string name="family_member__">Family Member</string>
+    <string name="delete_contact">Delete Contact</string>
+    <string name="start">Start</string>
+    <string name="start_timer">Start Timer</string>
+    <string name="pause_timer">"  Pause Timer  "</string>
+    <string name="resume">Resume</string>
+    <string name="resume_timer">Resume Timer</string>
+    <string name="stop_cancel_pause_timer">TO STOP, CANCEL OR PAUSE TIMER</string>
+    <string name="who_notified_checkin">Who should be notified of your check-in status?</string>
+    <string name="panic_triggered_timer_expires">A panic alert will be triggered when timer expires.</string>
+    <string name="press_image_below">Press image below to include a photo or video.</string>
+    <string name="checkin">Check-in</string>
+    <string name="loading">Loading</string>
+    <string name="please_wait_loading">Please wait while loading...</string>
+    <string name="alerts">Alerts</string>
+    <string name="receive_alerts">Receive Alerts</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="enter_valid_pin">Please enter a valid (4 digits) PIN</string>
+    <string name="alert_accepted">Alert accepted</string>
+    <string name="alert_rejected">Alert rejected</string>
+    <string name="registration_title">Registration Title Goes Here</string>
+    <string name="registration_tagline"/>
+    <string name="signup">Sign Up</string>
+    <string name="use_invite_code">Use Invite Code</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="registration_links">By using this application you accept our [Terms of Service,tos] and [Privacy Policy,privacy]. Parents with children under 13, review our [COPPA Policy,coppa]\n\nAlready have an account? [Log In,login]</string>
+    <string name="terms_of_use">Terms Of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="coppa_policy">COPPA Policy</string>
+    <string name="back"><![CDATA[< Back]]></string>
+    <string name="next">Next</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="all_fields_required">All fields required</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password_must_be_8_characters">Password Must be at least 8 characters</string>
+    <string name="add_profile_picture">Do you want to add a profile picture?</string>
+    <string name="payment">Payment</string>
+    <string name="subscription">Subscription</string>
+    <string name="invalid_subscription">Invalid subscription.</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="six_digit_code">Six-digit code</string>
+    <string name="show_password">Show Password</string>
+    <string name="did_you_receive_invite">Did you receive an invitation code through email or SMS? Enter it and select ‘Register’.</string>
+    <string name="enter_new_password">Enter a new password then select ‘Log in’.</string>
+    <string name="check_your_email">Check your email - we sent you an email with a six-digit reset code. Enter it below and select ‘Next’ to reset your password.</string>
+    <string name="email_will_be_sent">An email will be sent with instructions on how to reset your password. Enter email or username and select ‘Next’.</string>
+    <string name="about">About</string>
+    <string name="serial">Serial %1$s</string>
+    <string name="version">Version</string>
+    <string name="enter_required_fields">Please enter all required fields.</string>
+    <string name="offline_map">Offline Map</string>
+    <string name="reject">Reject</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="delete">Delete</string>
+    <string name="enter_reason_and_pin_code_to_cancel_panic">Enter reason and PIN code to cancel panic.</string>
+    <string name="cancel_reason_required">Cancel Reason (required)</string>
+    <string name="let_your_contacts_know_what_you_re_up_to_checking_in_with_them">Let your contacts know what you\'re up to checking in with them.</string>
+    <string name="selecting_a_contact_as_a_family_member_will_allow_them_to_easy_add_you_as_one_of_their_contacts_n_n_required_fields_email_or_mobile_number_required">Selecting a contact as a family member will allow them to easy add you as one of their contacts.  * Required Fields - Email or mobile number required</string>
+    <string name="_3">3</string>
+    <string name="enter_your_login_credentials_and_select_log_in">Enter your login credentials and select‘Log in’.</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius">Celsius</string>
+    <string name="__you_">%1$s (You)</string>
+    <string name="covert_connect">Connect to the internet to perform this action.</string>
+  <string name="calling">Calling</string>
+  <string name="number">Number</string>
+    <string name="emergency_button">Emergency Button</string>
+    <string name="label">Label</string>
+    <string name="non_emergency_button">Non-Emergency Button</string>
+  <string name="value_too_long">Value is too long.</string>
+  <string name="panic_button">Panic Button</string>
+    <string name="message">Message</string>
+    <string name="dm">\\x1a</string>
+    <string name="unsend">""STO UNSENT""</string>
+    <string name="mss_send">""STO SENT""</string>
+</resources>

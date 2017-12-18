@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "994833207787",
+    "firebase_url": "https://deputize-america.firebaseio.com",
+    "project_id": "deputize-america",
+    "storage_bucket": "deputize-america.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994833207787:android:9bccaf113ace6213",
+        "android_client_info": {
+          "package_name": "com.xzfg.app.deputizeamerica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994833207787-5hrqp9iuksbpj9vv8hn9cuj9lp0n5d60.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYO_MWoCEvpbaOIw07Qn1Qwu7ffTzXJZs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994833207787:android:e70f4fb8adfc480b",
+        "android_client_info": {
+          "package_name": "com.xzfg.app.deputizeamerica.release"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994833207787-5hrqp9iuksbpj9vv8hn9cuj9lp0n5d60.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYO_MWoCEvpbaOIw07Qn1Qwu7ffTzXJZs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/first_image">
+        <bitmap android:src="@drawable/backgroundactive" android:gravity="center" />
+    </item>
+    <item android:id="@+id/second_image" android:top="0dp" android:left="0dp">
+        <bitmap android:src="@drawable/checkin" android:gravity="center" />
+    </item>
+</layer-list>

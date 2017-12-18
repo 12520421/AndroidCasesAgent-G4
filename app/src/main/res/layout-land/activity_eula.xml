@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xzfg.app.fragments.setup.StartSetupFragment">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/title"
+            android:text="@string/eula"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/redorange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        android:layout_above="@+id/btn_container"
+        android:background="@color/timberwolf">
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn_decline"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/decline"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+          tools:ignore="ButtonStyle"/>
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/accept"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+          tools:ignore="ButtonStyle"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+

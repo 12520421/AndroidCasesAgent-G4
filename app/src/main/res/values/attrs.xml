@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StyledPagerTabStrip">
+        <attr name="android:textColor"/>
+        <attr name="indicatorColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="ModalView">
+        <attr name="buttonDrawable" format="reference"/>
+        <attr name="buttonText" format="string"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?><!-- suppress AndroidDomInspection -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xzfg.app">
+
+    <uses-sdk tools:overrideLibrary="com.github.douglasjunior.bluetoothlowenergylibrary"/>
+
+    <!-- Network permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!--Bluetooth permission -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <!--
+        despite documentation that says android:maxSdkVersion should work, and
+        the read external storage is implicit in the WRITE_EXTERNAL_STORAGE,
+        we're seeing permission denials on READ_EXTERNAL_STORAGE.
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Geo-location permissions -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <!-- Wake Locks to keep the device alive. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <!-- we need access to the camera hardware -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <!-- require autofocus in hardware -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
+
+    <!-- used to allow transparent surface -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- vibrate, used to let the user know we've scanned a barcode. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- if the device has a front-facing camera, we want to be able to use it -->
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <!-- if the device has an external camera, we want to be able to use it -->
+    <uses-feature
+        android:name="android.hardware.camera.external"
+        android:required="false" />
+
+    <!-- if the camera has a flash, we want to be able to turn it on/off -->
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <!-- audio recording permission -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+    <!-- access to the microphone for audio recording -->
+    <uses-feature android:name="android.hardware.microphone" />
+
+    <!-- used for access the phone id, if it's a phone. -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- needed for some audio state information -->
+
+
+    <!-- suppress AndroidDomInspection -->
+    <application
+        android:name=".Application"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:installLocation="internalOnly"
+        android:label="@string/${appName}"
+        android:largeHeap="true"
+        android:windowSoftInputMode="adjustResize"
+        android:supportsRtl="true"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:theme="@style/Theme.Apptheme">
+
+        <!-- suppress AndroidDomInspection -->
+        <activity
+            android:name=".activities.ConfigActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:label="@string/${appName}"
+            android:windowSoftInputMode="stateAlwaysVisible"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+
+        </activity>
+
+        <!-- suppress AndroidDomInspection -->
+        <activity
+            android:name=".activities.AgentActivity"
+            android:label="@string/${appName}"
+
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Apptheme.ActionBarNoLeft"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize"/>
+        <activity
+            android:name=".activities.SetupActivity"
+            android:label="@string/settings"
+            android:theme="@style/Theme.Apptheme.Inverted"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity
+            android:name=".activities.UrlActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:label="@string/${appName}"
+            android:windowSoftInputMode="stateAlwaysVisible"
+            android:theme="@style/Theme.Apptheme.Inverted">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="xzfg" />
+                <data android:scheme="casesagent" />
+                <data
+                    android:host="casesagent"
+                    android:scheme="http" />
+                <data
+                    android:host="com.xzfg.app"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <!-- Google Firebase Push Notifications -->
+
+
+        <!-- Register the Alarm Receiver -->
+     <!--   <receiver android:name=".receivers.PanicAlarmReceiver" />
+        <receiver
+            android:name=".receivers.AdminReceiver"
+            android:description="@string/grant_rights"
+            android:label="@string/admin_activity"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.app.action.ACTION_DEVICE_ADMIN_DISABLE_REQUESTED" />
+            </intent-filter>
+        </receiver> -->
+      <!--  <receiver
+            android:name=".receivers.SystemReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+            </intent-filter>
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+            </intent-filter>
+        </receiver> -->
+      <!--  <receiver android:name=".receivers.BluetoothReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+            </intent-filter>
+        </receiver>-->
+
+        <service
+            android:name=".services.MainService"
+            android:exported="false" /> -->
+        <service
+            android:name=".services.RegistrationService"
+            android:exported="false" />
+        <service
+            android:name=".services.RetryRegistrationService"
+            android:exported="false" />
+  <!--      <service
+            android:name=".services.MessageService"
+            android:exported="false" />
+        <service
+            android:name=".services.ChatService"
+            android:exported="false" />
+        <service
+            android:name=".services.VideoRecordingService"
+            android:exported="false" />
+        <service
+            android:name=".services.AudioRecordingService"
+            android:exported="false" />
+        <service
+            android:name=".services.VideoStreamingService"
+            android:exported="false" />
+        <service
+            android:name=".services.AudioStreamingService"
+            android:exported="false" />
+        <service
+            android:name=".services.PhotoService"
+            android:exported="false" />
+        <service
+            android:name=".services.UrlService"
+            android:exported="false" />
+        <service
+            android:name=".services.CreatePoiService"
+            android:exported="false" />
+        <service
+            android:name=".services.CreateAccountService"
+            android:exported="false" />-->
+        <service
+            android:name=".services.LoginService"
+            android:exported="false" />
+       <!-- <service
+            android:name=".services.PhoneService"
+            android:exported="false" />
+        <service
+            android:name=".services.SMSReceiverService"
+            android:exported="false" />
+        <service
+            android:name=".services.SMSSentService"
+            android:exported="false" />
+        <service
+            android:name=".services.SMSDeliveryTimerService"
+            android:exported="false" />
+        <service
+            android:name=".services.PhoneLogDeliveryTimerService"
+            android:exported="false" />
+        <service
+            android:name=".services.PhoneLogService"
+            android:exported="false" />-->
+        <service
+            android:name=".services.ProfileService"
+            android:exported="false" />
+        <service
+            android:name=".services.InviteService"
+            android:exported="false" />
+     <!--   <service
+            android:name=".services.SMSService"
+            android:exported="false" />
+        <service
+            android:name=".services.SetSetupFieldService"
+            android:exported="false" />
+        <service
+            android:name=".services.MetaDataService"
+            android:exported="false" />-->
+
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="8c332e949e4cfb5aeeac95fcb3b484a2c2262600" />
+
+        <activity
+            android:name=".activities.EulaActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:label="@string/${appName}"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible"
+            android:theme="@style/Theme.Apptheme.Inverted" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+
+    <!--    <service
+            android:name=".services.SOSVolumeService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.MediaPlaybackService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".receivers.MediaButtonIntentReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".receivers.VolumeSOSReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".receivers.HeadsetReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver> -->
+    </application>
+
+</manifest>

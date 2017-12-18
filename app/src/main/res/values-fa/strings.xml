@@ -1,0 +1,327 @@
+<resources tools:locale="en_US" xmlns:tools="http://schemas.android.com/tools">
+    <!-- app name and variants -->
+    <string name="app_name">جک پات</string>
+    <string name="app_name_lite">شکافها آرشیو</string>
+    <string name="app_name_basic">شکافها عمومی</string>
+    <string name="app_name_pro">شکافها نرم افزار</string>
+    <string name="app_name_elite">شکافها نخبگان</string>
+    <string name="app_name_basic_enhanced">شکافها عمومی پیشرفته</string>
+    <string name="app_name_pro_enhanced">شکافها نرم افزار پیشرفته</string>
+    <string name="app_name_elite_enhanced">شکافها نخبگان پیشرفته</string>
+
+    <!-- tab labels -->
+    <string name="tab_collect">اطلاعات جمع آوری</string>
+    <string name="tab_chat">گپ زدن</string>
+    <string name="tab_map">نقشه</string>
+    <string name="tab_poi">POI</string>
+    <string name="tab_alerts">هشدارها</string>
+    <string name="tab_media">رسانه ها</string>
+
+    <!-- navigation drawer labels -->
+    <string name="drawer_chat">گپ زدن</string>
+    <string name="drawer_collect">اطلاعات جمع آوری</string>
+    <string name="drawer_map">نقشه</string>
+    <string name="drawer_alerts">هشدارها</string>
+    <string name="drawer_boss_mode">حالت باس</string>
+    <string name="drawer_media">رسانه ها</string>
+    <string name="drawer_poi">نقاط مورد علاقه</string>
+    <string name="drawer_settings">تنظیمات</string>
+    <string name="drawer_preferences">تنظیمات</string>
+    <string name="drawer_wipe_data">پاک کردن داده ها</string>
+
+    <!-- these strings, which were previously in use in the menu and tabs still have uses in
+    other parts of the application, primarily on screen headings and/or dialog box titles -->
+    <string name="chat">گپ زدن</string>
+    <string name="wipe_data">پاک کردن داده ها</string>
+    <string name="preferences">تنظیمات</string>
+    <string name="settings">تنظیمات</string>
+
+    <string name="android_too_old">این نرم افزار نیاز به آندروید 4.2 و یا بالاتر.</string>
+    <string name="admin_activity">مدیریت دستگاه</string>
+    <string name="success_title">موفقیت</string>
+    <string name="error_title">خطا</string>
+    <string name="scan_settings">تنظیمات اسکن</string>
+    <string name="settings_description">برای ثبت نام، تنظیمات دستگاه خود را از مشخصات سرور خود را اسکن.</string>
+    <string name="scan_completed">تنظیمات اسکن با موفقیت انجام شد.</string>
+    <string name="grant_rights">شما باید این نرم افزار حقوق اداری به منظور ادامه عطا کند.</string>
+    <string name="public_broadcast">پخش به تمام</string>
+    <string name="general_chat">چت عمومی</string>
+    <string name="send_a_message">ارسال یک پیام …</string>
+    <string name="existing">موجود</string>
+    <string name="not_while_recording">شما نمیتوانید حالت ضبط تغییر نیست در حالی که ضبط.</string>
+    <string name="camera_unavailable">دوربین در حال حاضر انتخاب شده نمی تواند باز شود.</string>
+    <string name="case_information">موارد</string>
+    <string name="case_number">شماره</string>
+    <string name="case_description">شرح</string>
+    <string name="select_media">انتخاب رسانه</string>
+    <string name="same_as_fix_interval">همان ثابت فاصله</string>
+    <string name="maximum_tracking">حداکثر پیگیری زمان</string>
+    <string name="fde_unavailable">آندروید کامل دیسک رمزگذاری شده است در این دستگاه پشتیبانی نمی شود.</string>
+    <string name="wipe_notice">از راه دور پاک کردن است باعث شده است.</string>
+    <string name="video_streaming_quality">ویدئو کیفیت جریان</string>
+    <string name="language">زبان</string>
+    <string name="language_changed">زبان تغییر</string>
+    <string name="language_restart">لطفا از نرم افزار راه اندازی مجدد و یا راه اندازی مجدد دستگاه برای تنظیمات زبان جدید خود را به طور کامل اثر را.</string>
+    <string name="error">خطا</string>
+    <string name="error_occurred">خطایی رخ داده است.</string>
+    <string name="language_description">اگر شما نیاز به یک زبان مختلف، آن را در زیر انتخاب کنید.</string>
+    <string name="wipe_confirmation">این یک تنظیم مجدد کارخانه بر روی دستگاه شما انجام، و قابل بازگشت نیست.</string>
+    <string name="user_offline">کاربر آفلاین</string>
+    <string name="send_message_via">ارسال پیام از طریق …</string>
+    <string name="email">ایمیل</string>
+    <string name="sms">پیامک</string>
+
+    <!-- barcode suggestions -->
+    <string name="center_barcode">مرکز بارکد.</string>
+    <string name="tap_to_focus">ضربه بزنید تمرکز می کنند.</string>
+    <string name="avoid_glare">اجتناب از تابش خیره کننده و سایه.</string>
+
+    <string name="_yes_">بله</string>
+    <string name="_no_">بدون</string>
+
+    <string name="live_tracking">پیگیری زنده</string>
+    <string name="allow_live_tracking">امکان ردیابی زنده</string>
+    <string name="allow_live_tracking_">امکان ردیابی زندگی می کنند؟</string>
+    <string name="allow_live_tracking_description">این امر مستلزم روشن کردن اجازه ترجیح پیگیری زنده.</string>
+
+    <string name="phone_title">تلفن</string>
+    <string name="phone_recordcalls">تماس های ضبط تلفن</string>
+    <string name="phone_sms">جمع سجلات SMS</string>
+    <string name="phone_phonelogs">جمع سجلات الهاتف</string>
+
+    <string name="phoneCalls_none">خاموش</string>
+    <string name="phoneCalls_outgoing">المنتهية ولايته</string>
+    <string name="phoneCalls_incoming">الوارد</string>
+    <string name="phoneCalls_both">على حد سواء</string>
+
+    <string name="fix_day_interval">رفع فاصله</string>
+    <string name="reporting_interval">گزارش فاصله</string>
+    <string name="maximum">بیشترین</string>
+    <string name="ping_interval">پینگ فاصله</string>
+    <string name="default_screen">به طور پیش فرض صفحه</string>
+    <string name="image_quality">کیفیت تصویر</string>
+    <string name="image_size">حجم تصویر</string>
+    <string name="video_quality">کیفیت فیلم</string>
+    <string name="video_size">ویدئو حجم</string>
+    <string name="video_cases">موارد ویدئو</string>
+    <string name="include_audio">شامل صوتی</string>
+    <string name="storage">ذخیره سازی</string>
+    <string name="use_external">استفاده خارجی</string>
+    <string name="best_for_connection">بهترین برای اتصال</string>
+    <string name="low_3g">پایین (3G)</string>
+    <string name="medium_wifi">متوسط ​​(وای فای)</string>
+    <string name="high_maximum">بالا (حداکثر)</string>
+    <string name="s352_288">352x288</string>
+    <string name="s640_480">640x480</string>
+    <string name="s960_540">960x540</string>
+    <string name="s1280_720">1280x720 (720p)</string>
+    <string name="s1920_1080">1920x1080 (1080p)</string>
+    <string name="video_framerate">Framerate از فیلم</string>
+
+    <string name="recording_cancelled">ضبط لغو</string>
+    <string name="insufficient_space">فضای کافی برای انجام این عملیات وجود دارد.</string>
+    <string name="ran_out_of_space">ضبط شده است به طور خودکار فسخ که شما تقریبا خسته ذخیره سازی در رسانه های انتخاب شده است.</string>
+
+    <string name="hide_my_location">پنهان کردن مکان من</string>
+    <string name="show_agents">نمایش نمایندگی</string>
+    <string name="show_cases">نمایش موارد</string>
+    <string name="show_details">نمایش جزییات</string>
+    <string name="auto_track">خودکار آهنگ</string>
+    <string name="points_of_interest">نقاط مورد علاقه</string>
+    <string name="wipe_data_description"><![CDATA[Wiping data will&#8230;<br>&#8226; Erase external storage<br>&#8226; Factory reset your device]]></string>
+    <string name="reset_will_follow">تنظیم مجدد کارخانه دستگاه به دنبال خواهد داشت.</string>
+    <string name="boss_label">جک پات</string>
+    <string name="boss_mode">حالت باس</string>
+    <string name="boss_mode_tap">دکمه ضربه بزنید زیر به سوئیچ به حالت رئیس.</string>
+    <string name="slot_game_display">دستگاه بازی اسلات نمایش داده خواهد شد.</string>
+    <string name="execute_boss_mode">اجرای حالت رئیس ژست برای از سرگیری.</string>
+    <string name="audio_live">صوتی</string>
+    <string name="video_live">فیلم زنده</string>
+    <string name="audio">شنیداری</string>
+    <string name="video">تصویری</string>
+    <string name="photo">عکس</string>
+    <string name="photos">عکس</string>
+    <string name="disabled">غیر فعال</string>
+    <string name="send">ارسال</string>
+    <string name="clear">واضح</string>
+    <string name="cancel">لغو کردن</string>
+    <string name="ok">باشه</string>
+    <string name="sending">در حال ارسال …</string>
+    <string name="message_queued">صف برای بعد تحویل.</string>
+    <string name="message_failed">ارسال نشد - بررسی ارتباط خود را.</string>
+    <string name="warning">هشدار</string>
+    <string name="chat_remove_all">این اقدام پیام برای همه کاربران روشن است.</string>
+
+    <string name="registration_success">ثبت نام با موفقیت انجام شد.</string>
+    <string name="registration_failed">ثبت نام شکست خورده است.</string>
+    <string name="qrcode_success">کد QR را اسکن موفق، تلاش ثبت نام.</string>
+    <string name="qrcode_failed">کد QR نمی تواند پردازش شود، لطفا دوباره سعی کنید.</string>
+
+    <string name="clear_all_messages">پاک کردن تمام پیام</string>
+    <string name="contacts">اطلاعات تماس</string>
+
+    <string name="network_error">می تواند سرور از دسترس نیست. بعدا دوباره امتحان کنید.</string>
+    <string name="not_available">این تابع در این زمان در دسترس نیست.</string>
+
+    <string name="agree">موافقت</string>
+    <string name="security">امنیت</string>
+    <string name="level">سطح امنیتی</string>
+    <string name="medium">متوسط</string>
+    <string name="high">زیاد</string>
+
+    <string name="security_changed">امنیت تغییر</string>
+    <string name="security_changed_description">سطح امنیتی از متوسط ​​به بالا تغییر شده است. برنامه دیگر اطلاعات در مورد دستگاه ذخیره کنید.</string>
+    <string name="confirm_change">تایید تغییر</string>
+
+    <string name="security_not_changed">امنیت تغییر نکرده است</string>
+    <string name="security_not_changed_description">سطح امنیت از بالا به متوسط ​​تغییر نکرد.</string>
+
+    <string name="null_case_number"><![CDATA[<None>]]></string>
+    <!-- alphabetic order, must match the language_code array below properly.  Note that English has an empty item. -->
+    <string-array name="languages">
+        <item>Device Default</item>
+        <item>Arabic</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Pashto</item>
+        <item>Persian</item>
+        <item>Spanish</item>
+    </string-array>
+
+    <string name="create_poi">ایجاد POI</string>
+
+    <string name="bytes_abbreviated">B</string>
+    <string name="kilobytes_abbreviated">KB</string>
+    <string name="megabytes_abbreviated">MB</string>
+    <string name="miles_abbreviated">مایل</string>
+    <string name="kilometers_abbreviated">کیلومتر</string>
+
+    <!-- navigation drawer strings are used for accessibiltiy -->
+    <string name="navigation_drawer_open">کشو ناوبری گسترش</string>
+    <string name="navigation_drawer_close">بستن ناوبری کشو</string>
+
+    <!-- these are used to fill in the variables in the encryption mismatch messages below -->
+    <string name="aes_128">رمزگذاری AES-128</string>
+    <string name="aes_256">رمزگذاری AES-256</string>
+    <string name="des">رمزگذاری 3DES</string>
+    <string name="no_encryption">بدون رمزنگاری</string>
+
+    <string name="on">بر</string>
+    <string name="off">خاموش</string>
+
+    <string name="poi_name">نام</string>
+    <string name="enter_or_edit_info">را وارد کنید و یا اطلاعات زیر ویرایش</string>
+    <string name="description">شرح</string>
+    <string name="address">نشانی</string>
+    <string name="group">گروه</string>
+    <string name="category">رده</string>
+    <string name="latitude">عرض جغرافیایی</string>
+    <string name="longitude">طول جغرافیایی</string>
+
+    <string name="play">بازی</string>
+    <string name="pause">توقف</string>
+    <string name="stop">توقف</string>
+    
+    <!-- these strings contain variables, indicated by %X%Y (X == index, Y == value type, s for string, d for digit, and so on. -->
+    <string name="chatting_with_name"><![CDATA[Chatting with <b>%1$s</b>]]></string>
+    <string name="chat_remove_user">This action will clear messages from %1$s.</string>
+    <string name="creating_poi">Creating POI \"%1$s\" at %2$s, %3$s</string>
+    <string name="confirm_description_1">Type \'%1$s\' if you want to temporarily store information on this device.</string>
+    <string name="confirm_description_2">Information will be stored with %1$s.</string>
+    <string name="case_number_">%1$s</string>
+    
+    <!-- user: message -->
+    <string name="last_message">%1$s: %2$s</string>
+    
+    <string name="title_count">%1$s (%2$s)</string>
+    
+    <!-- best -->
+    <string name="_best_">%1$d (Best)</string>
+    
+    <string name="no_encryption_mismatch_error" tools:ignore="StringFormatCount">This application does not support encryption.  The barcode contains %2$s.  The encryption key can be adjusted on the server under \'Admin : Org Settings\'.  Alternatively, you could download another version of the application that supports no encryption.</string>
+    <string name="encryption_mismatch_error">This application only supports %1$s.  The barcode contains %2$s.  The encryption key can be adjusted on the server under \'Admin : Org Settings\'.  Alternatively, you could download another version of the application that supports %2$s.</string>
+    <string name="field_required">The %1$s field is required.</string>
+    
+
+    <!--
+        android's plurals allow for dealing with languages that have
+        different needs based on the size of a number.
+        %d is the number.
+        zero == what to do if the number is 0
+        one == what to do if the number is 1
+        two == what to do if the number is 2
+        few == what to do if the number is "a few" as determined by the language/locale
+        many == what to do if the number is "many" as determined by the language/locale
+        other == what to do if the number doesn't fit into any of the above cases.
+
+        In English, two, few, many, and other are the same.
+
+        Zero is sometimes the same as 2, sometimes not.
+        For example "Every 0 Seconds" & "Every 2 Seconds". Although for something like
+        time, in this case "Never" is the 0 version. Except Android doesn't do this for
+        english!
+
+        1 is usually singular, and sometimes the number can be left out
+        "Every Second" is nicer than "Every 1 Second".
+    -->
+    <string name="never">هرگز</string>
+    <plurals name="every_second">
+        <item quantity="zero">هرگز</item>
+        <item quantity="one">%d دوم</item>
+        <item quantity="two">%d ثانیه</item>
+        <item quantity="few">%d ثانیه</item>
+        <item quantity="many">%d ثانیه</item>
+        <item quantity="other">%d ثانیه</item>
+    </plurals>
+    <plurals name="every_minute">
+        <item quantity="zero">هرگز</item>
+        <item quantity="one">%d دقیقه</item>
+        <item quantity="two">%d دقیقه</item>
+        <item quantity="few">%d دقیقه</item>
+        <item quantity="many">%d دقیقه</item>
+        <item quantity="other">%d دقیقه</item>
+    </plurals>
+    <plurals name="every_hour">
+        <item quantity="zero">هرگز</item>
+        <item quantity="one">%d ساعت</item>
+        <item quantity="two">%d ساعت</item>
+        <item quantity="few">%d ساعت</item>
+        <item quantity="many">%d ساعت</item>
+        <item quantity="other">%d ساعت</item>
+    </plurals>
+    
+    <!-- these are not yet in use, maybe do not translate these just yet -->
+    <plurals name="_byte">
+        <item quantity="zero">%d Bytes</item>
+        <item quantity="one">%d Byte</item>
+        <item quantity="two">%d Bytes</item>
+        <item quantity="few">%d Bytes</item>
+        <item quantity="many">%d Bytes</item>
+        <item quantity="other">%d Bytes</item>
+    </plurals>
+    <plurals name="_kilobyte">
+        <item quantity="zero">%d Kilobytes</item>
+        <item quantity="one">%d Kilobyte</item>
+        <item quantity="two">%d Kilobytes</item>
+        <item quantity="few">%d Kilobytes</item>
+        <item quantity="many">%d Kilobytes</item>
+        <item quantity="other">%d Kilobytes</item>
+    </plurals>
+    <plurals name="_megabyte">
+        <item quantity="zero">%d Megabytes</item>
+        <item quantity="one">%d Megabyte</item>
+        <item quantity="two">%d Megabytes</item>
+        <item quantity="few">%d Megabytes</item>
+        <item quantity="many">%d Megabytes</item>
+        <item quantity="other">%d Megabytes</item>
+    </plurals>
+    <plurals name="_gigabyte">
+        <item quantity="zero">%d Gigabytes</item>
+        <item quantity="one">%d Gigabyte</item>
+        <item quantity="two">%d Gigabytes</item>
+        <item quantity="few">%d Gigabytes</item>
+        <item quantity="many">%d Gigabytes</item>
+        <item quantity="other">%d Gigabytes</item>
+    </plurals>
+    
+</resources>

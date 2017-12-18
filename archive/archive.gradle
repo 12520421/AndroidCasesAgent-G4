@@ -1,0 +1,110 @@
+/*
+//classpath 'com.github.jcandksolutions.gradle:android-unit-test:2.0.2'
+//apply plugin: 'android-unit-test'
+
+android {
+    productFlavors {
+
+        // 3des encryption
+        basic {
+            applicationId "com.xzfg.app.basic"
+            manifestPlaceholders = [ appName:"app_name_basic" ]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "false"
+        }
+
+        // AES-128 encryption
+        pro {
+            applicationId "com.xzfg.app.pro"
+            manifestPlaceholders = [ appName:"app_name_pro" ]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "false"
+        }
+
+        // AES-256 encryption
+        elite {
+            applicationId "com.xzfg.app.elite"
+            manifestPlaceholders = [ appName:"app_name_elite" ]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "false"
+        }
+
+        // 3des encryption
+        basicEnhanced {
+            applicationId "com.xzfg.app.basic.enhanced"
+            manifestPlaceholders = [ appName:"app_name_basic_enhanced" ]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "false"
+        }
+
+        // AES-128 encryption
+        proEnhanced {
+            applicationId "com.xzfg.app.pro.enhanced"
+            manifestPlaceholders = [ appName:"app_name_pro_enhanced" ]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "false"
+        }
+
+        // AES-256 encryption
+        eliteEnhanced {
+            applicationId "com.xzfg.app.elite.enhanced"
+            manifestPlaceholders = [ appName:"app_name_elite_enhanced" ]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "false"
+        }
+
+        audioindicator {
+            applicationId "com.xzfg.app.nn"
+            manifestPlaceholders = [appName: "app_name_lite"]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "true"
+            buildConfigField "boolean", "SSL_PINNING", "false"
+            buildConfigField "int", "DEFAULT_PORT", "4998"
+            buildConfigField "String", "DEFAULT_URL", "\"\""
+            buildConfigField "String", "DEFAULT_ORG", "\"\""
+        }
+
+        deputizeAmerica {
+            applicationId "com.xzfg.app.deputizeamerica"
+            manifestPlaceholders = [appName: "app_name_deputizeamerica"]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "true"
+            buildConfigField "boolean", "SSL_PINNING", "false"
+            buildConfigField "int", "DEFAULT_PORT", "4998"
+            buildConfigField "String", "DEFAULT_URL", "\"www.bluebirdstaging.com\""
+            buildConfigField "String", "DEFAULT_ORG", "\"\""
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField "boolean", "USE_NOTIFICATION", "false"
+            buildConfigField "boolean", "BATTERY_WHITELIST", "true"
+        }
+
+
+        funpin {
+            applicationId "com.xzfg.app.funpin"
+            manifestPlaceholders = [appName: "app_name_pin"]
+            buildConfigField "boolean", "HEADLESS", "false"
+            buildConfigField "boolean", "AUDIO_NOTIFICATION", "false"
+            buildConfigField "boolean", "SSL_PINNING", "true"
+            buildConfigField "int", "DEFAULT_PORT", "4998"
+            buildConfigField "String", "DEFAULT_URL", "\"\""
+            buildConfigField "String", "DEFAULT_ORG", "\"\""
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField "boolean", "USE_NOTIFICATION", "false"
+            buildConfigField "boolean", "BATTERY_WHITELIST", "true"
+        }
+
+
+    }
+}
+
+dependencies {
+    //compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+    //compile 'com.drewnoakes:metadata-extractor:2.8.1'
+    //compile 'pl.mg6.hrisey:hrisey:0.3.1'
+    //basicEnhancedCompile 'com.madgag.spongycastle:prov:1.51.0.0'
+    //proEnhancedCompile 'com.madgag.spongycastle:prov:1.51.0.0'
+    //eliteEnhancedCompile 'com.madgag.spongycastle:prov:1.51.0.0'
+    // Do not upgrade gcm library to >8.3.0 it will use support-v4 v23 and viewpager tabs will not display
+    //compile 'com.google.android.gms:play-services-gcm:8.3.0'
+}
+*/

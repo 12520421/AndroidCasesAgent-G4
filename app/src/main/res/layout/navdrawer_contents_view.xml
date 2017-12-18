@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- linear layout is not normally needed, just for the
+    design view in studio for checking the layout
+    <ScrollView
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/black">
+        -->
+    <!-- top items -->
+    <Button
+        android:id="@+id/alerts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_alerts_off"
+        android:text="@string/drawer_alerts"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/checkin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_checkin_off"
+        android:text="@string/drawer_checkin"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_timer_off"
+        android:text="@string/drawer_timer"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/collect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_collect_off"
+        android:text="@string/drawer_collect"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/contacts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_contacts_off"
+        android:text="@string/drawer_contacts"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_home_off"
+        android:text="@string/drawer_home"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_map_off"
+        android:text="@string/drawer_map"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/atcommands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dp"
+        android:background="@null"
+        android:drawablePadding="3dp"
+        android:drawableStart="@drawable/menu_atcommand_off"
+        android:text="AT Commands"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/markalert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="3dp"
+        android:paddingLeft="3dp"
+        android:drawableStart="@drawable/menu_markalert_off"
+        android:text="Mark/Alert"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/chat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_chat_off"
+        android:text="@string/drawer_chat"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:paddingLeft="4dp"
+        android:drawableStart="@drawable/menu_status_off"
+        android:text="Status"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/poi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_pois_off"
+        android:gravity="start|center_vertical"
+        android:text="@string/drawer_poi"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/collected_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_media_off"
+        android:gravity="start|center_vertical"
+        android:text="@string/drawer_media"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <!-- separator -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:adjustViewBounds="true"
+        android:background="#666666"
+
+        />
+
+    <!-- the rest -->
+
+    <Button
+        android:id="@+id/boss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_boss_off"
+        android:gravity="start|center_vertical"
+        android:text="@string/drawer_boss_mode"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/preferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_preferences_off"
+        android:gravity="start|center_vertical"
+        android:text="@string/drawer_preferences"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/configuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_settings_off"
+        android:gravity="start|center_vertical"
+        android:text="Configuration"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/unregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_unregister_off"
+        android:gravity="start|center_vertical"
+        android:text="Unregister"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_settings_off"
+        android:gravity="start|center_vertical"
+        android:text="@string/drawer_settings"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/sos"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_sos_off"
+        android:text="@string/sos"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/wipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_wipe_off"
+        android:gravity="start|center_vertical"
+        android:text="@string/drawer_wipe_data"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <!-- separator -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:adjustViewBounds="true"
+        android:background="#666666"
+
+        />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/menu_help_off"
+        android:gravity="start|center_vertical"
+        android:text="@string/help"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/mainMenuTextColor"
+        android:textStyle="bold" />
+
+    <!--
+    </LinearLayout>
+    </ScrollView>
+    -->
+
+</merge>

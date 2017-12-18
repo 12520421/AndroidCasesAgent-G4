@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+canvas {
+	width: 320px;
+	height: 480px;
+}
+</style>
+</head>
+
+<body onload="initSlotPage();">
+
+	<canvas id="myCanvas" width="600" height="1000" style="position:absolute;top:0px;left:0px;">Your browser does not support the HTML5 canvas tag.</canvas>
+
+	<script>
+
+	var scaleX = 320/600;
+	var scaleY = 480/1000;
+
+    var canvas = null;
+    var context = null;
+
+    var topLeftReelx = new Array(39, 215, 390);
+    var topLeftReely = 39;
+
+    var mNumSpokes = 9-6;
+
+    var mReelWidth = 157;
+    var mReelHeight = 157;
+    var mReelWindowHeight = 260;
+    var reels = new Object();
+    var buttons = new Object();
+    var slotBackObj = new Image();
+    var slotBackObjLoaded = false;
+    var reelShadowObj = new Image();
+    var reelShadowObjLoaded = false;
+    var slotReelBackObj = new Image();
+    var slotReelBackObjLoaded = false;
+    var digitsObj = new Image();
+    var digitsObjLoaded = false;
+
+
+    var numReels = topLeftReelx.length;
+    //var reelValues = new Array(2, 5, 20, 50, 100, 200, 300, 500, 1000);
+    var reelValues = new Array(1000, 500, 300, 200, 100, 50, 20, 5, 2);
+
+    var reelStopIndex = 0;
+    var reelSpinDelay = 0;
+    var spinning = false;
+
+    var winnerPaidDigits = null;
+    var betDigits = null;
+    var creditDigits = null;
+
+    var maxBet = 3;
+    var currentBet = 0;
+    var creditAward = 0;
+    var creditAwardDelay = 0;
+    var creditAwardStep = 0;
+    var myCredits = 300;
+
+    var unlockCode = 0;
+    var clearLockCode;
+    var codeEnterWaitTime = 5000;
+
+    function resetLockCode() {
+    	console.log("resetLockCode");
+        unlockCode = 0;
+    }
+
+    function initSlotPage() {
+        canvas = document.getElementById("myCanvas");
+        context = canvas.getContext("2d");
+
+/*         context.canvas.width  = window.innerWidth;
+        context.canvas.height = window.innerHeight; */
+
+        context.translate(canvas.width / 2, canvas.height / 2);
+        context.rotate(90*Math.PI/180);
+        context.translate(-500, -300);
+
+        canvas.addEventListener('touchstart', function (evt) {
+            var mousePos = getMousePos(canvas, evt);
+            var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+            //console.log(message + " " + spinning);
+            if (!spinning) {
+                if (mousePos.x > 10  * scaleX  && mousePos.x < 110  * scaleX && mousePos.y > 450 * scaleY && mousePos.y < 572 * scaleY) { //spin
+                    if (buttons["spinButton"].isEnabled()) {
+                        reelSpinDelay = Math.floor((Math.random() * 50) + 25) + 25;
+                        spinning = true;
+                        winnerPaidDigits.setValue(0);
+                        reelStopIndex = 0;
+                        var counter = 1;
+                        for (var t in reels) {
+                            reels[t].setRolling(true);
+                            reels[t].setRewind(counter * 5);
+                            reels[t].draw();
+                            counter++;
+                        }
+                        startSlots();
+                        buttons["spinButton"].enable(false);
+                        buttons["betButton"].enable(false);
+                        buttons["betMaxButton"].enable(false);
+                    }
+
+                } else if (mousePos.x > 10  * scaleX && mousePos.x < 110  * scaleX && mousePos.y > 144 * scaleY && mousePos.y < 237 * scaleY) { //bet one
+                    if (buttons["betButton"].isEnabled()) {
+                        betDigits.adjustValue(1);
+                        creditDigits.adjustValue(-1);
+                        drawDigits();
+                        buttons["spinButton"].enable(true);
+                        currentBet++;
+                        if (currentBet == maxBet) {
+                            buttons["betButton"].enable(false);
+                        }
+                        buttons["betMaxButton"].enable(false);
+                    }
+
+                } else if (mousePos.x > 10  * scaleX && mousePos.x < 110  * scaleX && mousePos.y > 257 * scaleY && mousePos.y < 344 * scaleY) { //bet max
+                    if (buttons["betMaxButton"].isEnabled()) {
+                        betDigits.adjustValue(maxBet);
+                        creditDigits.adjustValue(-maxBet);
+                        drawDigits();
+                        currentBet += maxBet;
+                        buttons["spinButton"].enable(true);
+                        buttons["betButton"].enable(false);
+                        buttons["betMaxButton"].enable(false);
+                    }
+                }
+                else if (mousePos.x > 300 * scaleX && mousePos.x < 560 * scaleX  &&  mousePos.y > 40 * scaleY && mousePos.y < 190 * scaleY ) {
+                	if(unlockCode == 0 || unlockCode == 4) {
+                		processCode();
+                	}
+                }else if (mousePos.x > 300 * scaleX && mousePos.x < 560 * scaleX &&  mousePos.y > 216 * scaleY && mousePos.y < 366 * scaleY  ) {
+                	if(unlockCode == 1 || unlockCode == 3) {
+                		processCode();
+                	}
+                }else if (mousePos.x > 300 * scaleX && mousePos.x < 560 * scaleX &&  mousePos.y > 389 * scaleY && mousePos.y < 539 * scaleY  ) {
+                	if(unlockCode == 2 ) {
+                		processCode();
+                	}
+                }
+            }
+
+        }, false);
+
+        for (var t = 0; t < numReels; t++) {
+            var startPos = Math.floor((Math.random() * 1200) + 1);
+            startPos = (Math.floor(startPos / mReelHeight) * mReelHeight) + (((mReelHeight * 3) - mReelWindowHeight) / 2);
+            var reel = new Reel(t, 'images/slotReel.png', startPos);
+            reels[t] = reel;
+        }
+
+        slotBackObj.onload = function() { slotBackObjLoaded = true; };
+        slotBackObj.src = 'images/slotBackFull.png';
+
+        reelShadowObj.onload = function () { reelShadowObjLoaded = true; };
+        reelShadowObj.src = 'images/reelShadow.png';
+
+        slotReelBackObj.onload = function () { slotReelBackObjLoaded = true; };
+        slotReelBackObj.src = 'images/slotReelBack.png';
+
+        digitsObj.onload = function () { digitsObjLoaded = true; };
+        digitsObj.src = 'images/digits.png';
+
+        buttons["spinButton"] = new Button("spinButton", "images/spinButton.png", 452, 472, 116, 116);
+        buttons["betButton"] = new Button("betButton", "images/betButton.png", 149, 491, 85, 85);
+        buttons["betMaxButton"] = new Button("betMaxButton", "images/betMaxButton.png", 259, 491, 85, 85);
+
+        winnerPaidDigits = new Digits(377, 360, 5, 0);
+        betDigits = new Digits(260, 360, 2, 0);
+        creditDigits = new Digits(42, 360, 5, myCredits);
+
+        initDraw();
+    }
+
+	function processCode() {
+		unlockCode++;
+	    console.log(unlockCode);
+	    window.clearTimeout(clearLockCode);
+	    if(unlockCode == 5) {
+	        window.location ="Agent.html";
+	    } else {
+	    	clearLockCode = window.setTimeout(resetLockCode, codeEnterWaitTime);
+	    }
+	}
+
+    function initDraw() {
+        var drawn = false;
+        if (slotBackObjLoaded && reelShadowObjLoaded && slotReelBackObjLoaded && digitsObjLoaded ) {
+            var reelsLoaded = 0;
+            for (var t in reels) {
+                if (reels[t].isLoaded()) {
+                    reelsLoaded++;
+                }
+            }
+            var allButtonsLoaded = true;
+            for (var t in buttons) {
+                if (!buttons[t].isLoaded()) {
+                    allButtonsLoaded = false;
+                }
+            }
+            if (reelsLoaded == numReels && allButtonsLoaded) {
+                context.drawImage(slotBackObj, 0, 0);
+                for (var t in reels) {
+                    reels[t].setRolling(true);
+                    reels[t].draw();
+                }
+                context.drawImage(reelShadowObj, topLeftReelx[0], topLeftReely);
+                drawDigits();
+                buttons["spinButton"].enable(false);
+                buttons["betButton"].enable(true);
+                buttons["betMaxButton"].enable(true);
+                drawn = true;
+            }
+        }
+        if (!drawn) {
+            window.setTimeout("initDraw();", 100);
+        }
+    }
+
+    function drawDigits() {
+        winnerPaidDigits.draw();
+        betDigits.draw();
+        creditDigits.draw();
+    }
+
+    function startSlots() {
+        var allStop = false;
+        context.drawImage(slotReelBackObj, topLeftReelx[0], topLeftReely);
+        for (var t in reels) {
+            reels[t].advance();
+        }
+        context.drawImage(reelShadowObj, topLeftReelx[0], topLeftReely);
+
+        reelSpinDelay--;
+        if (reelSpinDelay == 0) {
+            reelSpinDelay = Math.floor((Math.random() * 50) + 25);
+            if (reelStopIndex >= numReels) {
+                allStop = true;
+            } else {
+                reels[reelStopIndex].setRolling(false);
+                reelStopIndex++;
+            }
+        }
+        if (!allStop) {
+            window.setTimeout("startSlots();", 20); //20
+        } else {
+            creditAward = 0;
+
+            var pObj = new Object();
+            for ( var t in reels ) {
+                var points = reels[t].getPoints();
+                //console.log("points: " + points);
+                if ( points != -1 ) {
+                    if ( pObj[ points ] == null ) {
+                        pObj[ points ] = 1
+                } else {
+                        pObj[ points ] = pObj[ points ] + 1;
+                    }
+                }
+            }
+
+            for (var t in pObj) {
+                if (pObj[t] == 2) {
+                    creditAward = t / 50;
+                } else if (pObj[t] == 3) {
+                    creditAward = t;
+                }
+            }
+
+            //for (var t in reels) {
+            //    console.log("t: " + t);
+            //    console.log("s: " + reels[t].getStartPos());
+            //    var points = reels[t].getPoints();
+            //    console.log("points: " + points);
+
+            //    if (
+            //    //console.log(points);
+            //    //if (creditAward == 0 || points == creditAward) {
+            //    //    creditAward = points;
+            //    //} else {
+            //    //    creditAward = 0;
+            //    //    break;
+            //    //}
+
+
+
+            //    creditAward = 0;
+            //}
+            //console.log(creditAward);
+            if (creditAward > 0) {
+                creditAward = creditAward * currentBet;
+                creditAwardDelay = Math.floor((3000 - creditAward) / 3000) + 5;
+                if (creditAwardDelay < 0) {
+                    creditAwardDelay = 1;
+                }
+
+                window.setTimeout("awardCredits();", 0);
+            } else {
+                creditAward = 0;
+                buttons["betButton"].enable(true);
+                buttons["betMaxButton"].enable(true);
+            }
+            spinning = false;
+            betDigits.setValue(0);
+            drawDigits();
+            currentBet = 0;
+        }
+    }
+
+
+    function awardCredits() {
+        winnerPaidDigits.adjustValue(1);
+        creditDigits.adjustValue(1);
+        drawDigits();
+        creditAward--;
+        if (creditAward > 0) {
+            window.setTimeout("awardCredits();", creditAwardDelay);
+        } else {
+            buttons["betButton"].enable(true);
+            buttons["betMaxButton"].enable(true);
+        }
+    }
+
+
+    function Reel(position, imageSrc, startPos) {
+        this.startPos = startPos;
+        this.xSrc = 0;
+        this.ySrc = 0;
+        this.destXLoc = topLeftReelx[position];
+        this.destYLoc = topLeftReely;
+        this.image = new Image();
+        this.loaded = false;
+        this.image.onload = function () {
+            reels[position].setLoaded(true);
+        };
+        this.image.src = imageSrc;
+        this.rolling = false;
+        this.rewind = 0;
+        this.points = 0;
+        this.reelIndex = 0;
+    }
+    Reel.prototype.draw = function () {
+        if (this.loaded) {
+            context.drawImage(this.image, 0, this.startPos, mReelWidth, mReelWindowHeight, this.destXLoc, this.destYLoc, mReelWidth, mReelWindowHeight);
+        }
+    };
+    Reel.prototype.advance = function () {
+        if (this.rolling) {
+            if (this.rewind > 0) {
+                if (this.rewind < 10) {
+                    this.startPos += this.rewind;   //50, 25, 13, 7, 3, 1
+                }
+                this.rewind *= .93;
+                if (this.rewind < 2) {
+                    this.rewind = 0;
+                }
+            } else {
+                this.startPos -= 50;
+                if (this.startPos < 0) {
+                    this.startPos += ((mReelHeight * (mNumSpokes + 3)) - (mReelHeight * 3));
+                }
+            }
+        }
+        this.draw();
+    };
+    Reel.prototype.isLoaded = function () {
+        return this.loaded;
+    };
+    Reel.prototype.setLoaded = function (inLoaded) {
+        this.loaded = inLoaded;
+    };
+    Reel.prototype.setRolling = function (inRolling) {
+        this.rolling = inRolling;
+        if (!this.rolling) {
+            this.startPos = (Math.floor(this.startPos / (mReelHeight / 2)) * (mReelHeight / 2)) + (((mReelHeight * 3) - mReelWindowHeight) / 2);
+            var pointIndex = ((this.startPos + (mReelWindowHeight / 2)) / mReelHeight) - .5;
+            if (pointIndex > reelValues.length) {
+                pointIndex -= reelValues.length;
+            }
+            if (pointIndex != Math.floor(pointIndex)) {
+                this.points = -1;
+            } else {
+                this.points = reelValues[pointIndex];
+            }
+            this.reelIndex = Math.floor(pointIndex);
+        }
+    };
+    Reel.prototype.setRewind = function (inRewind) {
+        this.rewind = inRewind;
+    };
+    Reel.prototype.getPoints = function () {
+        return this.points;
+    };
+    Reel.prototype.getReelIndex = function () {
+        return this.reelIndex;
+    };
+    Reel.prototype.getStartPos = function () {
+        return this.startPos;
+    };
+
+    function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+            x: evt.targetTouches[0].pageX - rect.left,
+            y: evt.targetTouches[0].pageY - rect.top
+        };
+    }
+
+
+    function Digits(xLoc, yLoc, spaces, value) {
+        this.xLoc = xLoc;
+        this.yLoc = yLoc;
+        this.spaces = spaces;
+        this.width = 33;
+        this.height = 46;
+        this.value = value;
+    }
+    Digits.prototype.draw = function () {
+        var xLocLocal = this.xLoc;
+        var strVal = this.value.toString();
+        var padding = this.spaces - strVal.length;
+        if (padding > 0) {
+            for (var t = 0; t < padding; t++) {
+                context.drawImage(digitsObj, 0, 0, this.width, this.height, xLocLocal, this.yLoc, this.width, this.height);
+                xLocLocal += this.width;
+            }
+        }
+        var start = 0;
+        if (padding < 0) {
+            start = -padding;
+        }
+
+        for (var t = start; t < strVal.length; t++) {
+            var digit = strVal.substring(t, t + 1).charCodeAt() - 48;
+            var sourceX = (digit + 1) * this.width;
+            context.drawImage(digitsObj, sourceX, 0, this.width, this.height, xLocLocal, this.yLoc, this.width, this.height);
+            xLocLocal += this.width;
+        }
+    };
+    Digits.prototype.adjustValue = function (inAdjust) {
+        this.value += inAdjust;
+        if (this.value < 0) {
+            this.value = 0;
+            return true;
+        }
+        return false;
+    };
+    Digits.prototype.setValue = function (inValue) {
+        this.value = inValue;
+    };
+
+    function Button(name, imageSrc, xLoc, yLoc, width, height) {
+        this.name = name;
+        this.xLoc = xLoc;
+        this.yLoc = yLoc;
+        this.width = width;
+        this.height = height;
+        this.imageSrc = imageSrc;
+        this.image = new Image();
+        this.loaded = false;
+        this.image.onload = function () {
+            buttons[name].setLoaded(true);
+        };
+        this.image.src = imageSrc;
+        this.enabled = false;
+    }
+    Button.prototype.draw = function () {
+        if (this.loaded) {
+            var sourceX = this.enabled ? 0 : this.width;
+            var sourceY = 0;
+            context.drawImage(this.image, sourceX, sourceY, this.width, this.height, this.xLoc, this.yLoc, this.width, this.height);
+        }
+    };
+    Button.prototype.enable = function (inEnable) {
+        this.enabled = inEnable;
+        this.draw();
+    };
+    Button.prototype.isLoaded = function () {
+        return this.loaded;
+    };
+    Button.prototype.setLoaded = function (inLoaded) {
+        this.loaded = inLoaded;
+    };
+    Button.prototype.isEnabled = function () {
+        return this.enabled;
+    };
+
+</script>
+
+</body>
+</html>

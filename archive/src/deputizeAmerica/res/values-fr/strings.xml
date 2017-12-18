@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en_US">
+    <string name="slot_game_display">Une application météo affiche.</string>
+</resources>

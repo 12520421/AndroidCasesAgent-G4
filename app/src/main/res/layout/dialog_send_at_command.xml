@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_corner_all"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_top">
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:text="Cancel"
+            android:textSize="15dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="New Message"
+            android:textColor="@color/dark"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:background="@color/grey"
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/greydark"
+            android:text="Send" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_weight=".95"
+            android:layout_height="wrap_content"
+            android:hint="To:"
+            android:ems="10"
+            android:inputType="textPersonName" />
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_add_address"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cc/Bcc:"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subject:"
+        android:ems="10"
+        android:inputType="textPersonName" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

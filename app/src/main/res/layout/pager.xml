@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xzfg.app.widgets.MapThirdViewPager
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.xzfg.app.widgets.StyledPagerTabStrip
+        android:id="@+id/pager_title_strip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/gray11"
+        android:textColor="@color/white"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        app:indicatorColor="@color/orange" />
+</com.xzfg.app.widgets.MapThirdViewPager>

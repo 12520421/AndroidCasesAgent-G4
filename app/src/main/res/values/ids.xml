@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="map_myself" type="id"/>
+    <item name="map_cases" type="id"/>
+    <item name="map_others" type="id"/>
+    <item name="map_autotrack" type="id"/>
+    <item name="map_showdetails" type="id"/>
+
+    <item name="main_service" type="id"/>
+</resources>

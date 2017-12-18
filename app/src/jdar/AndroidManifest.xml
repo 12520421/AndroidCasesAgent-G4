@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.xzfg.app">
+
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <!--suppress AndroidDomInspection -->
+    <application
+        android:name="com.xzfg.app.Application"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:installLocation="internalOnly"
+        android:label="@string/${appName}"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Apptheme"
+      tools:ignore="GoogleAppIndexingWarning">
+        <!--suppress AndroidDomInspection -->
+        <activity
+            android:name="com.xzfg.app.activities.MainActivity"
+            android:label="@string/${appName}"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/first_image">
+        <bitmap android:src="@drawable/gray_cicle" android:gravity="center" />
+    </item>
+    <item android:id="@+id/second_image" android:top="0dp" android:left="0dp">
+        <bitmap android:src="@drawable/wipe" android:gravity="center"/>
+    </item>
+</layer-list>

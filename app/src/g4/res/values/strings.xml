@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en_US">
+    <string name="registration_title">Welcome to G4</string>
+    <string name="emoji"></string>
+    <string name="emoji_replace">5C</string>
+</resources>

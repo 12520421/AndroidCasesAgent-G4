@@ -1,0 +1,328 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/timberwolf"
+    >
+
+    <RelativeLayout android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="8dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/cancel"
+            android:text="@string/cancel"
+            />
+        <TextView
+            android:id="@+id/title"
+            android:text="@string/create_account"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/redorange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        android:layout_above="@+id/action"
+        android:fillViewport="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp">
+
+                    <TextView android:id="@+id/urlText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/url"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/url__"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText android:id="@+id/url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        tools:ignore="TextFields"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp">
+
+                    <TextView android:id="@+id/portText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/port"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/port__"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText
+                        android:id="@+id/port"
+                        android:layout_width="wrap_content"
+                        android:maxWidth="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp">
+
+                    <TextView android:id="@+id/orgText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/org"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/organization__"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText android:id="@+id/org"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp">
+
+                    <TextView android:id="@+id/nameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/name"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/name__"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp">
+
+                    <TextView android:id="@+id/userText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/user"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/username__"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText android:id="@+id/user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp">
+
+                    <TextView android:id="@+id/passwordText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/password"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/password__"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp">
+
+                    <TextView android:id="@+id/confpasswordText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/confpassword"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/confirm_password__"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText android:id="@+id/confpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp">
+
+                    <TextView android:id="@+id/emailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/email"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/email_address_"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp">
+
+                    <TextView android:id="@+id/phoneText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/confpassword"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:text="@string/phone_number_"
+                        android:paddingEnd="4dp"
+                      tools:ignore="RtlSymmetry"/>
+
+                    <EditText android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:hint="@string/phone_hint"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:selectAllOnFocus="true"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:padding="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_above="@+id/required"
+        />
+    <TextView android:id="@+id/required"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_required_fields"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        />
+</RelativeLayout>

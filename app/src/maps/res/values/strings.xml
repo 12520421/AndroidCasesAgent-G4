@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en_US">
+    <string name="registration_title">Welcome to Maps</string>
+    <string name="registration_links"></string>
+</resources>

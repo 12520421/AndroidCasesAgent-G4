@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:ignore="Overdraw">
+<TextView
+    android:id="@+id/app_version"
+    android:layout_width="@dimen/navigation_drawer_width"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:textColor="@color/timberwolf"
+    android:gravity="center_horizontal"
+    android:textAppearance="@android:style/TextAppearance.Small"
+    tools:text="1.0.0-DEBUG (1)"/>
+
+    <ScrollView
+    android:layout_above="@+id/app_version"
+    android:layout_width="wrap_content"
+    android:padding="4dp"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:ignore="Overdraw"
+    tools:context="com.xzfg.app.fragments.NavigationDrawerFragment"
+    android:background="@color/gray11"
+    >
+    <com.xzfg.app.widgets.NavdrawerContentsView
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+</ScrollView>
+</RelativeLayout>
