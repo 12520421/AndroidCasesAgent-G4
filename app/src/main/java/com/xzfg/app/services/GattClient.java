@@ -368,7 +368,6 @@ String temp="";
                 listATCommand.setData(command);
                 listATCommand.setType(isEnter);
                 ListCommandAll.add(listATCommand);
-
                 if( ListCommandAll.size()>600)
                 {
                     Log.d("Size","size :"+ListCommandAll.size());
